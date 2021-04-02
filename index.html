@@ -34,7 +34,7 @@ alert("Hello Javapoint");
 <!-- ===== BANNIERE D'ACCUEIL NALOUETTE ===== -->
 <div class="background-image text-secondary px-4 py-5 text-center link-active-scroll" style="background-image: url('./images/accueil.jpg'); background-color: #4c6c8c; background-size: cover; background-position: center; padding: 10rem;" id="accueil">
 	<div class="py-5 mt-3">
-		<h1 class="mt-5 display-3 text-white">Nalouettenana</h1>
+		<h1 class="mt-5 display-3 text-white">Nalouette</h1>
 		<p class="display-6 fs-5 mb-4 text-white">
 			création sur mesure
 			<br />
@@ -412,7 +412,6 @@ alert("Hello Javapoint");
 			</div>
 		</div>
 	</form>
-  </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
 </section>
 
 <!-- "placeholder=Leave a comment here" = texte écrit par défaut dans le formulaire et à remplacer par l'utilisateur -->
@@ -468,7 +467,7 @@ alert("Hello Javapoint");
     	$(window).scroll(function () {
     		var distance = $(window).scrollTop();
     		$('.link-active-scroll').each(function (i) {
-    			if ($(this).position().top<= distance) {
+    			if ($(this).position().top<= distance + 180) {
     				$('.navbar-nav a.active').removeClass('active');
     				$('.navbar-nav a').eq(i).addClass('active');
     			}

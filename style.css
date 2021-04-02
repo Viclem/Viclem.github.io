@@ -1,6 +1,6 @@
-/* html {
-  scroll-padding-top: 80px; /* height of sticky header
-} */
+html {
+  scroll-padding-top: 80px; /* height of sticky header */
+}
 
 #accueil{
 	background-attachment: fixed;
@@ -79,7 +79,7 @@ li.active{
 
 /* top+bottom=6 / right+left=0 */
 section{
-	padding: 2rem 0rem;
+	padding: 4rem 0rem;
 }
 
 .photographes-link, .mail-link, .navbar-rs-link{
