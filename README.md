@@ -8,14 +8,13 @@ TO DO :
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
 ```
 - [x] icone toggle à changer : "bi bi-list"
-- [ ] banner : bien centrer la photo (fleur visible)
+- [x] banner : bien centrer la photo (fleur visible)  ok sur écran d'ordi portable
 - [x] bouton pour retour en haut de la page
 - [ ] formulaire mail : bouton "envoyer" à paramétrer PHP
 - [x] footer à créer
 - [x] réseaux sociaux à ajouter : navbar + footer
 - [ ] trouver des icons (couture, aiguille...)
-- [ ] CSS pour les h2 ?
-- [ ] (carousel : changer le sens du swipe)
+- [x] CSS pour les h2 ?
 - [ ] crop image Lou-Elise
 - [x] ajouter icone Nalouette dans l'onglet
 - [ ] navbar : active link : comprendre pourquoi ça marche !!!!!
@@ -31,11 +30,13 @@ TO DO :
 - [ ] toggle : un link = une ligne
 - [ ] clic sur contact = contact pas en active (bleu gras) alors que les autres oui
 - [ ] logo favicon : à ne pas mettre transparent
-- [ ]
-- [ ]
-- [ ]
+- [ ] formulaire de contact : paramétrer lors de l'envoi "merci de remplir cette case" + téléphone : voir si possible de limiter à 10 chiffres ?
+- [ ] mail = nalouette ou nalouette28 ??
 - [ ]
 
+
+plus besoin :
+- [ ] (carousel : changer le sens du swipe)
 
 
 CODES COULEUR :
