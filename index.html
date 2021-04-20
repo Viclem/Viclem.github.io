@@ -81,8 +81,6 @@ BARRE DE NAVIGATION MENU
 	</div>
 </nav>
 
-<a href="contact.html">par ici</a>
-
 <!-- ==========================
 GALERIE PHOTOS
 ========================== -->
@@ -242,10 +240,10 @@ QUI SUIS-JE ?
 <section class="bg-light">
 	<div class="container">
 		<div class="row align-items-center">		<!-- align-items-center = alignement vertical -->
-			<div class="col-md-4 col-5 g-3">
+			<div class="col-md-4 col-5 gx-5">
         <img src="./images/quisuisje.jpg" class="img-fluid" style="border-radius:50%;" alt="quisuisje">
 			</div>
-			<div class="col-md-8 col-12">
+			<div class="col-md-8 col-12 gx-5">
 				<h2 class="display-6">Qui suis-je ?</h2>
 				<p style="text-align: justify;">
 					Nalouette est une auto-entreprise créée en août 2012.
@@ -299,44 +297,37 @@ CONTACTEZ-MOI
 ========================== -->
 <section class="link-active-scroll bg-light" id="contact">
   <div class="container">
-    <!-- <h2 class="display-6">Contactez-moi</h2>
-      <div class="text-center">
-        <a href="mailto:nalouette28@gmail.com" class="mail-link display-6 fs-4">nalouette28@gmail.com</a>
-      <div class="my-4 display-6 fs-5">
-        <a href="https://facebook.com/nalouette/"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/nalouette28/?igshid=xbfoc60naeft"><i class="bi bi-instagram"></i></a>
-      </div>
-      </div> -->
-
-      <div class="row align-items-center pb-4">
+      <div class="row align-items-center text-md-end text-center pb-4">
         <!-- contactez-moi -->
         <div class="col-md-7 col-12">
-          <h2 class="display-6 fs-1 text-uppercase text-md-end text-center px-5">Contactez-moi</h2>
+          <h2 class="display-6 fs-1 text-uppercase px-5">Contactez-moi</h2>
         </div>
-        <div class="col-md-5 col-12 skew d-none d-md-block">
+        <!-- rs + mail / block on sm -->
+        <div class="col-md-5 col-12 skew text-md-start text-center d-md-block d-none">
           <p>
             <a href="https://facebook.com/nalouette/" target="_blank"><i class="bi bi-facebook fs-5"></i></a>
             <a href="https://www.instagram.com/nalouette28/?igshid=xbfoc60naeft" target="_blank"><i class="bi bi-instagram fs-5"></i></a>
           </p>
           <p>
-            <a href="mailto:nalouette28@gmail.com" class="mail-link display-6 fs-5 ">nalouettecreation@gmail.com</a>
+            <a href="mailto:nalouette28@gmail.com" class="mail-link display-6 fs-5">nalouettecreation@gmail.com</a>
           </p>
         </div>
-        <div class="col-12 skew-md d-md-none d-block text-center">
-          <p>
+        <!-- rs+ mail / sm only -->
+        <div class="col-12 d-block d-md-none">
+          <div>
             <a href="https://facebook.com/nalouette/"><i class="bi bi-facebook fs-5"></i></a>
             <a href="https://www.instagram.com/nalouette28/?igshid=xbfoc60naeft"><i class="bi bi-instagram fs-5"></i></a>
-          </p>
-          <p>
+          </div>
+          <div class="">
             <a href="mailto:nalouette28@gmail.com" class="mail-link display-6 fs-5 ">nalouettecreation@gmail.com</a>
-          </p>
+          </div>
         </div>
       </div>
   	<!-- form -->
   	<form class="my-3">
   		<div class="row justify-content-center align-items-center">
         <!-- 1ère colonne "infos" -->
-  			<div class="col-lg-4">
+  			<div class="col-lg-4 gx-5">
   				<div class="form-floating mb-2">   <!-- = dans la case -->
   					<input type="text" class="form-control form-control-sm" id="name">
   					<label for="name">Nom</label>
@@ -351,7 +342,7 @@ CONTACTEZ-MOI
   				</div>
   			</div>
         <!-- 2ème colonne "message" -->
-  			<div class="col-lg-5">
+  			<div class="col-lg-5 gx-5">
   				<div class="form-floating">
   					<textarea class="form-control form-control-sm" id="message" style="height: 150px"></textarea>
   					<label for="message">Message</label>
@@ -382,9 +373,9 @@ CONTACTEZ-MOI
 MERCI LES PHOTOGRAPHES
 ========================== -->
 <section>
-	<div class="container text-center">
+	<div class="container text-center gx-5">
 		<p>
-			Un grand merci aux photographes professionnel·le·s et amateurs·trices qui mettent en lumière mes réalisations :
+			Merci aux photographes qui mettent en lumière mes réalisations :
 		</p>
 		<div class="row fw-light">
 			<div class="col-md-2 col-12">

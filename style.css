@@ -26,23 +26,23 @@ h2{
   padding-top: 40px;
   padding-left: 40px;
   transform: skewX(-40deg);
+  display: visible-md;
 }
 
 .skew p{
   transform: skewX(40deg);
 }
 
-.skew-md{
+/* .skew-md{
   border-left: 1px solid #4c6c8c;
   border-right: 1px solid #4c6c8c;
-  background: yellow;
-  padding: 50px;
+  padding: 1px;
   transform: skewX(-40deg);
 }
 
-.skew-md p {
+.skew-md p{
   transform: skewX(40deg);
-}
+} */
 
 /* navbar : shadow */
 .navbar{
