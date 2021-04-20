@@ -1,8 +1,27 @@
-section{
-  padding: 15rem;
+#myDIV{
+    background-color: lightblue;
+    transform: rotate(7deg);
+    width: 100px;
+    height: 100px;
 }
 
-a.nav-link {
+section{
+  padding: 6rem;
+}
+
+.mail-link{
+	color: #4c6c8c;
+	text-decoration: none;
+}
+
+.mail-link:hover{
+	color: #fa5e74;
+  text-decoration: none;
+}
+
+
+
+/* a.nav-link {
   position: relative;
   color: #000;
   text-decoration: none;
@@ -23,10 +42,10 @@ a.nav-link::before {
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
-}
+} */
 
 /* for the animation to appear */
-a.nav-link:hover::before {
+/* a.nav-link:hover::before {
   visibility: visible;
   transform: scaleX(1);
 }
@@ -43,7 +62,7 @@ a.active::after {
 
 .active{
   color: red !important;
-}
+} */
 
 html {
   scroll-padding-top: 80px; /* height of sticky header */
@@ -73,7 +92,7 @@ a:hover::after {
 
 
 /* Define the shape and color of the hamburger lines */
-.navbar-toggler span {
+/* .navbar-toggler span {
     display: block;
     background-color: #4f4f4f;
     height: 3px;
@@ -85,13 +104,13 @@ a:hover::after {
     opacity: 1;
     transition: all 0.35s ease-out;
     transform-origin: center left;
-}
+} */
 
 
 /* top line needs a little padding */
-.navbar-toggler span:nth-child(1) {
+/* .navbar-toggler span:nth-child(1) {
     margin-top: 0.3em;
-}
+} */
 
 /**
  * Animate collapse into X.
