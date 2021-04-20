@@ -4,11 +4,11 @@
   CONFIGURATION
   ********************************************************************************************
 */
-// expéditeur du dormulaire. Pour des raisons de sécurité, de plus en plus d'hébergeurs imposent que ce soit une adresse sur votre hébergement/nom de domaine.
+// expéditeur du dormulaire. Pour des raisons de sécurité, de plus en plus d'hébergeurs imposent que ce soit une adresse sur votre hébergement/name de domaine.
 // Par exemple si vous mettez ce script sur votre site "test-site.com", mettez votre email @test-site.com comme expéditeur (par exemple contact@test-site.com)
 // Si vous ne changez pas cette variable, vous risquez de ne pas recevoir de formulaire.
 $email_expediteur = 'greg__@outlook.com';
-$nom_expediteur = 'greg.com';
+$name_expediteur = 'greg.com';
 
 // destinataire est votre adresse mail (cela peut être la même que cl'expéditeur ci-dessus). Pour envoyer à plusieurs destinataires à la fois, séparez-les par un point-virgule
 $destinataire = 'greg__@outlook.com';
@@ -63,19 +63,19 @@ else
   }
 
   // formulaire envoyé, on récupère tous les champs.
-  $nom     = (isset($_POST['nom']))     ? Rec($_POST['nom'])     : '';
+  $name     = (isset($_POST['name']))     ? Rec($_POST['name'])     : '';
   $email   = (isset($_POST['email']))   ? Rec($_POST['email'])   : '';
-  $objet   = (isset($_POST['objet']))   ? Rec($_POST['objet'])   : '';
+  $object   = (isset($_POST['object']))   ? Rec($_POST['object'])   : '';
   $message = (isset($_POST['message'])) ? Rec($_POST['message']) : '';
 
   // On va vérifier les variables et l'email ...
   $email = (IsEmail($email)) ? $email : ''; // soit l'email est vide si erroné, soit il vaut l'email entré
 
-  if (($nom != '') && ($email != '') && ($objet != '') && ($message != ''))
+  if (($name != '') && ($email != '') && ($object != '') && ($message != ''))
   {
     // les 4 variables sont remplies, on génère puis envoie le mail
     $headers  = 'MIME-Version: 1.0' . "\r\n";
-    $headers .= 'From:'.$nom_expediteur.' <'.$email_expediteur.'>' . "\r\n" .
+    $headers .= 'From:'.$name_expediteur.' <'.$email_expediteur.'>' . "\r\n" .
         'Reply-To:'.$email. "\r\n" .
         'Content-Type: text/plain; charset="utf-8"; DelSp="Yes"; format=flowed '."\r\n" .
         'Content-Disposition: inline'. "\r\n" .
@@ -96,8 +96,8 @@ else
     $caracteres_speciaux     = array('&#039;', '&#8217;', '&quot;', '<br>', '<br />', '&lt;', '&gt;', '&amp;', '…',   '&rsquo;', '&lsquo;');
     $caracteres_remplacement = array("'",      "'",        '"',      '',    '',       '<',    '>',    '&',     '...', '>>',      '<<'     );
 
-    $objet = html_entity_decode($objet);
-    $objet = str_replace($caracteres_speciaux, $caracteres_remplacement, $objet);
+    $object = html_entity_decode($object);
+    $object = str_replace($caracteres_speciaux, $caracteres_remplacement, $object);
 
     $message = html_entity_decode($message);
     $message = str_replace($caracteres_speciaux, $caracteres_remplacement, $message);
@@ -108,7 +108,7 @@ else
     $tmp = explode(';', $cible);
     foreach($tmp as $email_destinataire)
     {
-      if (mail($email_destinataire, $objet, $message, $headers))
+      if (mail($email_destinataire, $object, $message, $headers))
         $num_emails++;
     }
 
