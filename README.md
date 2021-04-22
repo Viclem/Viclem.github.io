@@ -10,14 +10,13 @@ TO DO :
 - [x] icone toggle à changer : "bi bi-list"
 - [x] banner : bien centrer la photo (fleur visible)  ok sur écran d'ordi portable
 - [x] bouton pour retour en haut de la page
-- [ ] formulaire mail : bouton "envoyer" à paramétrer PHP
+- [x] formulaire mail : bouton "envoyer" à paramétrer PHP
 - [x] footer à créer
 - [x] réseaux sociaux à ajouter : navbar + footer
 - [ ] trouver des icons (couture, aiguille...)
 - [x] CSS pour les h2 ?
 - [ ] crop image Lou-Elise
 - [x] ajouter icone Nalouette dans l'onglet
-- [ ] navbar : active link : comprendre pourquoi ça marche !!!!!
 - [x] navbar link to sections : pas de partie cachée derrière la navbar sur mobile
 - [x] formulaire de contact : font-size ok partout ? (form-control-sm)
 - [x] bouton "demander un devis" à renvoyer vers contact
