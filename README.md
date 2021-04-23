@@ -26,14 +26,12 @@ TO DO :
 - [x] logo Nalouette : fond transparent
 - [ ] installer SCSS pour changer la barre de navigation entre format telephone et format normal breakpoint-sm
 - [ ] toggle : paramétrer Javascript pour avoir icon toggler après clic sur lien du menu
-- [ ] toggle : un link = une ligne
-- [ ] clic sur contact = contact pas en active (bleu gras) alors que les autres oui
 - [ ] logo favicon : à ne pas mettre transparent
 - [ ] formulaire de contact : paramétrer lors de l'envoi "merci de remplir cette case" + téléphone : voir si possible de limiter à 10 chiffres ?
 - [ ] mail = nalouette ou nalouette28 ??
-- [ ] créer boucles php : galerie photos + modals associés
+- [x] créer boucles php : galerie photos + modals associés
 - [ ] photos à bien organiser et nommer dans les dossiers
-- [ ] mettre en forme la page de form_send "merci on a bien reçu votre demande"
+- [x] mettre en forme la page de form_send "merci on a bien reçu votre demande"
 - [ ] mettre en forme le mail reçu sur Nalouette
 
 
