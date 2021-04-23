@@ -28,7 +28,7 @@
 
 <!-- ===== TEST JAVASCRIPT ===== -->
 <!-- <script type="text/javascript">
-alert("Hello Javapoint");
+alert("coucou petit chat");
 </script> -->
 
 

@@ -27,8 +27,17 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <!-- ===== TEST JAVASCRIPT ===== -->
-<!-- <script type="text/javascript">
-alert("Hello Javapoint");
+<script type="text/javascript" src="./test.js"></script>
+<script>
+coucou();
+</script>
+<!-- alert("Hello Javapoint");
+</script>
+<script>
+import {coucou} from './alert.js';
+coucou();/*
+alert("Hello Javapoint");*/
+
 </script> -->
 
 
@@ -92,146 +101,145 @@ GALERIE PHOTOS
         <li class="list active" data-filter="all">Tout</li>
         <li class="list" data-filter="2021">2021</li>
         <li class="list" data-filter="2020">2020</li>
+        <li class="list" data-filter="2019">2019</li>
       </ul>
     </div>
   </div>
   <div class="row g-3 product">
-    <div class="col-lg-3 col-md-4 col-sm-6 col-6 filter 2021">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#Modal1"><img src="./images/1_indiv_Louane/indiv_louane_1.jpg" alt="" class="img-fluid"></a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-6 filter 2021">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#Modal2"><img src="./images/2_duonatTC_ClioClub/duonat_clioclub_1.jpg" alt="" class="img-fluid"></a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-6 filter 2021">
-      <a href="#"><img src="./images/4_indiv_Lou-Elise/indiv_louelise_2.jpg" alt="" class="img-fluid"></a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-6 filter 2021">
-      <a href="#"><img src="./images/3_ens_LesLucioles/ens_leslucioles_1.jpg" alt="" class="img-fluid"></a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-6 filter 2021">
-      <a href="#"><img src="./images/5_indiv_Auréane/indiv_aureane_1.jpg" alt="" class="img-fluid"></a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-6 filter 2021">
-      <a href="#"><img src="./images/6_indiv_Fany/indiv_fany_1.jpg" alt="" class="img-fluid"></a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-6 filter 2020">
-      <a href="#"><img src="./images/7_indiv_Maïly/indiv_maily_1.jpg" alt="" class="img-fluid"></a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-6 filter 2020">
-      <a href="#"><img src="./images/9_indiv_Célia/indiv_celia_1.jpg" alt="" class="img-fluid"></a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-6 filter 2020">
-      <a href="#"><img src="./images/10_indiv_Margaux/indiv_margaux_1.jpg" alt="" class="img-fluid"></a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-6 filter 2020">
-      <a href="#"><img src="./images/11_indiv_Athénaïs/indiv_athenais_1.jpg" alt="" class="img-fluid"></a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-6 filter 2020">
-      <a href="#"><img src="./images/8_indiv_Liza/indiv_liza_1.jpg" alt="" class="img-fluid"></a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-6 filter 2020">
-      <a href="#"><img src="./images/12_indiv_Adeline/indiv_adeline_3.jpg" alt="" class="img-fluid"></a>
-    </div>
+    <script>
+        var images_filters_modals = [
+          ["/2021/indiv_Louane/indiv_louane_1.jpg", "2021", "indiv_Louane"],
+          ["/2021/duonatTC_ClioClub/duonat_clioclub_1.jpg", "2021", "duonatTC_ClioClub"],
+          ["/2021/indiv_Lou-Elise/indiv_louelise_2.jpg", "2021", "indiv_Lou-Elise"],
+          ["/2021/ens_LesLucioles/ens_leslucioles_1.jpg", "2021", "ens_LesLucioles"],
+
+          ["/2021/indiv_Aureane/indiv_aureane_1.jpg", "2021", "indiv_Aureane"],
+          ["/2021/indiv_Fany/indiv_fany_1.jpg", "2021", "indiv_Fany"],
+          ["/2021/indiv_Maily/indiv_maily_1.jpg", "2021", "indiv_Maily"],
+          ["/2021/indiv_Celia/indiv_celia_1.jpg", "2021", "indiv_Celia"],
+
+          ["/2021/indiv_Margaux/indiv_margaux_1.jpg", "2021", "indiv_Margaux"],
+          ["/2021/indiv_Athenais/indiv_athenais_1.jpg", "2021", "indiv_Athenais"],
+          ["/2021/indiv_Liza/indiv_liza_1.jpg", "2021", "indiv_Liza"],
+          ["/2021/indiv_Adeline/indiv_adeline_3.jpg", "2021", "indiv_Adeline"],
+
+          ["/2020/indiv_Maily/indiv_maily_1.jpg", "2020", "indiv_Maily"],
+        ]
+
+        var id_titre_soustitre_description_images = [
+          ["indiv_Louane", "Jupette individuelle", "Louane",
+          "Voile chair, lycra rouge, dentelle noire <br /> + de 700 strass",
+          ["/2021/indiv_Louane/indiv_louane_1.jpg", "/2021/indiv_Louane/indiv_louane_2.jpg", "/2021/indiv_Louane/indiv_louane_3.jpg", "/2021/indiv_Louane/indiv_louane_4.jpg"]],
+
+          ["duonatTC_ClioClub", "Jupette duo nationale toutes catégories", "Clio-Club, St-Georges/Eure",
+          "Voile chair, velours bleu, lycra bleu et blanc, résille bleue <br /> Plumes tons de bleu <br /> + de 700 strass <br /> Création réalisée en 2 exemplaires",
+          ["/2021/duonatTC_ClioClub/duonat_clioclub_1.jpg", "/2021/duonatTC_ClioClub/duonat_clioclub_2.jpg", "/2021/duonatTC_ClioClub/duonat_clioclub_3.jpg", "/2021/duonatTC_ClioClub/duonat_clioclub_4.jpg"]],
+
+          ["indiv_Lou-Elise", "Jupette individuelle", "Lou-Élise, Clio-Club, St-Georges/Eure",
+          "Voile chair uni, lycra brillant noir, lycra carminio, tulle noir et dentelle rouge <br /> 620 strass",
+          ["/2021/indiv_Lou-Elise/indiv_louelise_1.jpg", "/2021/indiv_Lou-Elise/indiv_louelise_2.jpg", "/2021/indiv_Lou-Elise/indiv_louelise_3.jpg", "/2021/indiv_Lou-Elise/indiv_louelise_4.jpg"]],
+
+          ["ens_LesLucioles", "Jupette ensemble", "Les Lucioles, Luisant",
+          "Voile chair, lycra blanc et fuschia, résille fuschia <br /> Plumes et touches de peintures <br /> + de 700 strass <br /> Création réalisée en 4 exemplaires",
+          ["/2021/ens_LesLucioles/ens_leslucioles_1.jpg", "/2021/ens_LesLucioles/ens_leslucioles_2.jpg", "/2021/ens_LesLucioles/ens_leslucioles_3.jpg", "/2021/ens_LesLucioles/ens_leslucioles_4.jpg"]],
+
+          ["indiv_Aureane", "Jupette individuelle", "Auréane, Clio-Club, St-Georges/Eure",
+          "Voile chair, lycra blanc, lilas, lavande et violet, tulle lavande <br /> 1780 strass",
+          ["/2021/indiv_Aureane/indiv_aureane_1.jpg", "/2021/indiv_Aureane/indiv_aureane_2.jpg", "/2021/indiv_Aureane/indiv_aureane_3.jpg", "/2021/indiv_Aureane/indiv_aureane_4.jpg", "/2021/indiv_Aureane/indiv_aureane_5.jpg"]],
+
+          ["indiv_Fany", "Jupette individuelle", "Fany, Clio-Club, St-Georges/Eure",
+          "Voile chair / lycra marine et prussia <br /> 860 strass",
+          ["/2021/indiv_Fany/indiv_fany_1.jpg", "/2021/indiv_Fany/indiv_fany_2.jpg", "/2021/indiv_Fany/indiv_fany_3.jpg", "/2021/indiv_Fany/indiv_fany_4.jpg"]],
+
+          ["indiv_Maily", "Jupette individuelle", "Maïly, La Dracénoise GR, Draguignan",
+          "Voile chair / lycra jaune fluo et bordeaux / tulle jaune fluo et rose fluo <br /> 1200 strass",
+          ["/2021/indiv_Maily/indiv_maily_1.jpg", "/2021/indiv_Maily/indiv_maily_4.jpg", "/2021/indiv_Maily/indiv_maily_2.jpg"]],
+
+          ["indiv_Celia", "Jupette individuelle", "Célia, Clio-Club, St-Georges/Eure",
+          "Voile chair, lycra rose pâle et bordeaux, tulle camelia <br /> 870 strass",
+          ["/2021/indiv_Celia/indiv_celia_1.jpg", "/2021/indiv_Celia/indiv_celia_4.jpg", "/2021/indiv_Celia/indiv_celia_2.jpg", "/2021/indiv_Celia/indiv_celia_3.jpg"]],
+
+          ["indiv_Margaux", "Jupette individuelle", "Margaux",
+          "Voile chair / lycra vanille, prussia et turquoise / tulle bleu <br /> 800 strass",
+          ["/2021/indiv_Margaux/indiv_margaux_1.jpg", "/2021/indiv_Margaux/indiv_margaux_2.jpg", "/2021/indiv_Margaux/indiv_margaux_3.jpg"]],
+
+          ["indiv_Athenais", "Jupette individuelle", "Athénaïs, Clio-Club, St-Georges/Eure",
+          "Voile chair / lycra jaune et prussia / tulle bleu / résille jaune fluo <br /> 1420 strass",
+          ["/2021/indiv_Athenais/indiv_athenais_1.jpg", "/2021/indiv_Athenais/indiv_athenais_2.jpg", "/2021/indiv_Athenais/indiv_athenais_3.jpg", "/2021/indiv_Athenais/indiv_athenais_4.jpg"]],
+
+          ["indiv_Liza", "Jupette individuelle", "Liza",
+          "Voile chair / lycra vert fluo, vert flèche et rouge / lycra multipoint doré / tulle vert fluo, jaune et orange tango <br /> 420 strass",
+          ["/2021/indiv_Liza/indiv_liza_1.jpg", "/2021/indiv_Liza/indiv_liza_2.jpg", "/2021/indiv_Liza/indiv_liza_3.jpg", "/2021/indiv_Liza/indiv_liza_4.jpg"]],
+
+          ["indiv_Adeline", "Jupette individuelle", "Adeline, Les Lucioles, Luisant",
+          "Voile chair / lycra tons de bleu et noir <br /> 1530 strass",
+          ["/2021/indiv_Adeline/indiv_adeline_3.jpg"]],
+        ]
+
+        for (var i=0; i<images_filters_modals.length; i=i+1) {
+          document.write("<div class=\"col-lg-3 col-md-4 col-sm-6 col-6 filter "+
+          images_filters_modals[i][1]+"\"><a href=\"#\" data-bs-toggle=\"modal\" data-bs-target=\"#"+
+          images_filters_modals[i][2]+"\"><img src=\"./images"+
+          images_filters_modals[i][0]+"\" alt=\"\" class=\"img-fluid\"></a></div>");
+        }
+      </script>
   </div>
 </section>
 
-<!-- ===== MODAL LOUANE ===== -->
-<div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-			<div class="container">
-				<div class="modal-header" style="border: 0">
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<div class="row">
-						<div class="col-12">
-							<p class="display-6 fs-5 text-uppercase m-0" id="exampleModalLabel">
-								<strong>Jupette individuelle</strong>
-							</p>
-							<p class="display-6 fs-6 text-uppercase">
-								Louane - Clio-Club, St-Georges/Eure
-							</p>
-							<p class="fw-light mb-0" style="font-size: 14px;">
-								Voile chair, lycra rouge, dentelle noire
-								<br />
-								+ de 700 strass
-							</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6 col-sm-12 g-3">
-							<img src="./images/1_indiv_Louane/indiv_louane_1.jpg" alt="" class="img-fluid">
-						</div>
-						<div class="col-md-6 col-sm-12 g-3">
-							<img src="./images/1_indiv_Louane/indiv_louane_2.jpg" alt="" class="img-fluid">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 col-sm-12 g-3">
-							<img src="./images/1_indiv_Louane/indiv_louane_3.jpg" alt="" class="img-fluid">
-						</div>
-						<div class="col-md-12 col-sm-12 g-3">
-							<img src="./images/1_indiv_Louane/indiv_louane_4.jpg" alt="" class="img-fluid">
-						</div>
-					</div>
-					<div class="modal-footer justify-content-center my-2" style="border: 0">
-						<button type="button" class="btn btn-sm text-uppercase text-white" style="background-color: #4c6c8c;" data-bs-dismiss="modal">Fermer</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+<script>
+  for (var i=0; i<id_titre_soustitre_description_images.length; i=i+1) {
+    document.write("<div class=\"modal fade\" id=\""+id_titre_soustitre_description_images[i][0]+"\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\
+     <div class=\"modal-dialog modal-lg\">\
+       <div class=\"modal-content\">\
+         <div class=\"container\">\
+           <div class=\"modal-header\" style=\"border: 0\">\
+             <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>\
+           </div>\
+           <div class=\"modal-body\">\
+             <div class=\"row\">\
+               <div class=\"col-12\">\
+                 <p class=\"display-6 fs-5 text-uppercase m-0\" id=\"exampleModalLabel\">\
+                   <strong>"+id_titre_soustitre_description_images[i][1]+"</strong>\
+                 </p>\
+                 <p class=\"display-6 fs-6 text-uppercase\">\
+                   "+id_titre_soustitre_description_images[i][2]+"\
+                 </p>\
+                 <p class=\"fw-light mb-0\" style=\"font-size: 14px;\">\
+                   "+id_titre_soustitre_description_images[i][3]+"\
+                 </p>\
+               </div>\
+             </div>")
 
-<!-- ===== MODAL DUO NAT TC ===== -->
-<div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-			<div class="container">
-				<div class="modal-header" style="border: 0">
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<p class="display-6 fs-5 text-uppercase m-0" id="exampleModalLabel">
-						<strong>Jupette duo nationale toutes catégories</strong>
-					</p>
-					<p class="display-6 fs-6 text-uppercase">
-						Clio-Club, St-Georges/Eure
-					</p>
-					<p class="fw-light mb-0" style="font-size: 14px;">
-						Voile chair, velours bleu, lycra bleu et blanc, résille bleue
-						<br />
-						Plumes tons de bleu
-						<br />
-						+ de 700 strass
-						<br />
-						Création réalisée en 2 exemplaires
-					</p>
-					<div class="row">
-						<div class="col-md-6 col-sm-12 g-3">
-							<img src="./images/2_duonatTC_ClioClub/duonat_clioclub_1.jpg" alt="" class="img-fluid">
-						</div>
-						<div class="col-md-6 col-sm-12 g-3">
-							<img src="./images/2_duonatTC_ClioClub/duonat_clioclub_2.jpg" alt="" class="img-fluid">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 col-sm-12 g-3">
-							<img src="./images/2_duonatTC_ClioClub/duonat_clioclub_3.jpg" alt="" class="img-fluid">
-						</div>
-						<div class="col-md-12 col-sm-12 g-3">
-							<img src="./images/2_duonatTC_ClioClub/duonat_clioclub_4.jpg" alt="" class="img-fluid">
-						</div>
-					</div>
-					<div class="modal-footer justify-content-center my-2" style="border: 0">
-						<button type="button" class="btn btn-sm text-uppercase text-white" style="background-color: #4c6c8c;" data-bs-dismiss="modal">Fermer</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+  document.write("<div class=\"row align-items-center\">\
+              <div class=\"col-md-6 col-sm-12 g-3 text-center\">\
+                 <img src=\"./images"+id_titre_soustitre_description_images[i][4][0]+"\" alt=\"\" class=\"img-fluid\">\
+               </div>\
+               <div class=\"col-md-6 col-sm-12 g-3 text-center\">\
+                 <img src=\"./images"+id_titre_soustitre_description_images[i][4][1]+"\" alt=\"\" class=\"img-fluid\">\
+               </div>\
+             </div>\
+             <div class=\"row\">\
+               <div class=\"col-md-12 col-sm-12 g-3 text-center\">\
+                 <img src=\"./images"+id_titre_soustitre_description_images[i][4][2]+"\" alt=\"\" class=\"img-fluid\">\
+               </div>\
+               <div class=\"col-md-12 col-sm-12 g-3 text-center\">\
+                 <img src=\"./images"+id_titre_soustitre_description_images[i][4][3]+"\" alt=\"\" class=\"img-fluid\">\
+               </div>\
+               <div class=\"col-md-12 col-sm-12 g-3 text-center\">\
+                 <img src=\"./images"+id_titre_soustitre_description_images[i][4][4]+"\" alt=\"\" class=\"img-fluid\">\
+               </div>\
+             </div>")
+  document.write("\
+             <div class=\"modal-footer justify-content-center my-2\" style=\"border: 0\">\
+               <button type=\"button\" class=\"btn btn-sm text-uppercase text-white\" style=\"background-color: #4c6c8c;\" data-bs-dismiss=\"modal\">Fermer</button>\
+             </div>\
+           </div>\
+         </div>\
+       </div>\
+     </div>\
+   </div>")}
+</script>
+
 
 
 <!-- ==========================

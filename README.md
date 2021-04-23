@@ -31,9 +31,10 @@ TO DO :
 - [ ] logo favicon : à ne pas mettre transparent
 - [ ] formulaire de contact : paramétrer lors de l'envoi "merci de remplir cette case" + téléphone : voir si possible de limiter à 10 chiffres ?
 - [ ] mail = nalouette ou nalouette28 ??
-- [ ] automatiser la date de màj
 - [ ] créer boucles php : galerie photos + modals associés
 - [ ] photos à bien organiser et nommer dans les dossiers
+- [ ] mettre en forme la page de form_send "merci on a bien reçu votre demande"
+- [ ] mettre en forme le mail reçu sur Nalouette
 
 
 plus besoin :
