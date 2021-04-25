@@ -18,15 +18,70 @@
     </head>
 
     <body>
+      <div class="container text-center">
+        <div style="margin-top: 300px;">
+          <img src="./images/Logo/Nalouette_logo.png" class="my-3" width="60" alt="Nalouette">
+          <h5 class="my-4 display-6 fs-4">Votre message a bien été envoyé, merci !</h5>
+          <a href="index.html" class="btn btn-sm text-uppercase text-white mt-4 px-3 py-2" style="background-color: #4c6c8c;" role="button">Retour à l'accueil</a>
+        </div>
+        <!-- <img src="./images/paperplane.jpg" class="mt-5" style="margin-left: 550px;" width="120" alt=""> -->
 
-<div class="container text-center">
-  <div style="margin-top: 300px;">
-    <img src="./images/Logo/Nalouette_logo.png" class="my-3" width="60" alt="Nalouette">
-    <h5 class="my-4 display-6 fs-4">Votre message a bien été envoyé, merci !</h5>
-    <a href="index.html" class="btn btn-sm text-uppercase text-white mt-4 px-3 py-2" style="background-color: #4c6c8c;" role="button">Retour à l'accueil</a>
-  </div>
-  <img src="./images/paperplane.jpg" class="mt-5" style="margin-left: 550px;" width="120" alt="">
-</div>
+        <div style="text-align:center;">
+          <canvas id="canvas"></canvas>
+        </div>
+
+        <script>
+          var canvas = document.querySelector("canvas");
+          canvas.width = window.innerWidth*0.3;
+          canvas.height = window.innerHeight*0.15;
+
+          var ctx = canvas.getContext('2d');
+          var paperplane = new Image();
+          paperplane.src = './images/paperplane.png';
+
+          var before = new Date().getTime();
+          var now = 0;
+          var since_update = 0;
+          var ms = 5;
+
+          var x_start = -100;
+          var y_start = (canvas.height/2)-15;
+          var x = x_start;
+          var y = y_start;
+
+          var base_rot = Math.PI/12;
+          var rot = base_rot;
+
+
+          requestAnimationFrame(update);
+
+          function update(time){
+              now = new Date().getTime();
+              dt = now - before;
+              before = now;
+              since_update += dt;
+
+              if (since_update > ms){
+                since_update %= ms;
+                x += 1;
+                y = y_start+Math.sin(x/50)*(canvas.height/4);
+              }
+              rot = base_rot+(y-y_start)/(canvas.height/4);
+
+              if (x-paperplane.naturalWidth*0.15 > canvas.width || x < x_start || y > canvas.height || y < 0) {
+                x = x_start;
+                y = y_start;
+              }
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.setTransform(1, 0, 0, 1, x, y);
+            ctx.rotate(rot);
+            ctx.drawImage(paperplane, 0, 0, paperplane.naturalWidth*0.15, paperplane.naturalHeight*0.15);
+            ctx.setTransform(1, 0 ,0 , 1, 0, 0); // reset to default transform
+
+            requestAnimationFrame(update);
+          }
+        </script>
+      </div>
 
     </body>
 </html>

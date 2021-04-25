@@ -32,7 +32,9 @@ TO DO :
 - [x] créer boucles php : galerie photos + modals associés
 - [ ] photos à bien organiser et nommer dans les dossiers
 - [x] mettre en forme la page de form_send "merci on a bien reçu votre demande"
-- [ ] mettre en forme le mail reçu sur Nalouette
+- [x] mettre en forme le mail reçu sur Nalouette
+- [ ] confirm_message : réussir à centrer verticalement automatiquement
+- [ ] pj : pouvoir en sélectionner de différents dossiers
 
 
 plus besoin :
@@ -43,3 +45,9 @@ CODES COULEUR :
 rose coool : 247,121,127,1
 bleu/gris : 4c6c8c
 rose : fa5e74
+
+
+'''
+<input type="file" accept="image/*,.pdf">
+<input type="file" id="docpicker" accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+'''

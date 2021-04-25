@@ -1,16 +1,13 @@
 <?php
   use PHPMailer\PHPMailer\PHPMailer;
 
-  $email = $_POST['email'];
   $name = $_POST['name'];
+  $email = $_POST['email'];
+  $phone = $_POST['phone'];
   $body = $_POST['message'];
-  $subject = "Nalouette nouveau message!";
-  /*
-  $email = "hellooclem.5@gmail.com";
-  $name = "Violette";
-  $subject = "coucouu peticha";
-  $body = "Coucou mon peticha comment ca va ? tu veux un bisou?";
-*/
+
+  $subject = "Nalouettecreation : nouveau message";
+
   require_once "PHPMailer/PHPMailer.php";
   require_once "PHPMailer/SMTP.php";
   require_once "PHPMailer/Exception.php";
@@ -30,8 +27,41 @@
   $mail->setFrom("hellooclem.5@gmail.com", $name);
   $mail->addReplyTo($email, $name);
   $mail->addAddress("hellooclem.5@gmail.com");
+
+  for($var=0;$var<count($_FILES['attachment']['name']);$var++){
+     $mail->AddAttachment($_FILES['attachment']['tmp_name'][$var], $_FILES['attachment']['name'][$var]);
+  }
+
   $mail->Subject = $subject;
-  $mail->Body = $body;
+  $mail->Name = $name;
+  $mail->Body = "
+            <html>
+                <body>
+                <img src='https://github.com/Viclem/Viclem.github.io/blob/main/images/Logo/Nalouette_logo.png?raw=true' width='40'/>
+                <h3>Nouveau message via nalouettecreation.com</h3>
+                  <table style='width:800px;'>
+                      <tbody>
+                          <tr>
+                              <td style='width:100px'><b>Nom : <b></td>
+                              <td style='width:700px'>$name</td>
+                          </tr>
+                          <tr>
+                              <td style='width:100px'><b>Email : <b></td>
+                              <td style='width:700px'>$email</td>
+                          </tr>
+                          <tr>
+                              <td style='width:100px'><b>Téléphone : <b></td>
+                              <td style='width:700px'>$phone</td>
+                          </tr>
+                          <tr>
+                              <td style='width:100px; vertical-align: top;'><b>Message : <b></td>
+                              <td style='width:700px; text-align: justify;'>$body</td>
+                          </tr>
+                      </tbody>
+                  </table>
+                </body>
+            </html>
+            ";
 
   if ($mail->send()) {
 

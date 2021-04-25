@@ -326,7 +326,7 @@ CONTACTEZ-MOI
         </div>
       </div>
   	<!-- form -->
-  	<form class="my-3" action="send_form.php" method="post">
+  	<form class="my-3" action="send_form.php" method="post" enctype="multipart/form-data">
   		<div class="row justify-content-center align-items-center">
         <!-- 1ère colonne "infos" -->
   			<div class="col-lg-4 gx-5">
@@ -344,18 +344,19 @@ CONTACTEZ-MOI
   				</div>
   			</div>
         <!-- 2ème colonne "message" -->
-  			<div class="col-lg-5 gx-5">
+  			<div class="col-lg-6 gx-5">
   				<div class="form-floating">
   					<textarea name="message" class="form-control form-control-sm" id="message" style="height: 150px"></textarea>
   					<label for="message">Message</label>
   				</div>
   				<div>
             <div class="row align-items-center">
-              <div class="col-5 mb-2">
-                <label for="pj" class="form-label form-control-sm">Ajouter une pièce jointe :</label>
+              <div class="col-md-5 col-12">
+                <label for="pj" class="form-label form-control-sm">Ajouter une pièce jointe :<br /><p class="fst-italic" style="font-size: 12px;">Vous pouvez sélectionner plusieurs fichiers.<br />Les fichiers sélectionnés doivent se situer dans un même dossier.</p></label>
               </div>
-              <div class="col-7 mb-2">
-                <input class="form-control form-control-sm" type="file" id="pj" multiple>
+              <div class="col-md-7 col-12">
+                <input class="form-control form-control-sm" type="file" name="attachment[]" id="attachment" multiple>
+                <div class="" style="font-size: 12px;" id="selectedfiles"></div>
               </div>
             </div>
   				</div>
@@ -491,6 +492,35 @@ FOOTER
           $(this).addClass('active').siblings().removeClass('active');
         })
       })
+    </script>
+
+<!-- FORM FILES INPUT : pour afficher les noms des fichiers ajoutés par l'utilisateur -->
+    <script type="text/javascript">
+    	var selDiv = "";
+
+    	document.addEventListener("DOMContentLoaded", init, false);
+
+    	function init() {
+    		document.querySelector('#attachment').addEventListener('change', handleFileSelect, false);
+    		selDiv = document.querySelector("#selectedfiles");
+    	}
+
+    	function handleFileSelect(e) {
+    		console.dir(e);
+
+    		if(!e.target.files) return;
+
+    		selDiv.innerHTML = "";
+
+    		var files = e.target.files;
+    		for(var i=0; i<files.length; i++) {
+    			var f = files[i];
+
+    			selDiv.innerHTML += f.name + "<br/>";
+
+    		}
+
+    	}
     </script>
 
     </body>
