@@ -1,98 +1,6 @@
-#myDIV{
-    background-color: lightblue;
-    transform: rotate(7deg);
-    width: 100px;
-    height: 100px;
-}
-
-section{
-  padding: 6rem;
-}
-
-.mail-link{
-	color: #4c6c8c;
-	text-decoration: none;
-}
-
-.mail-link:hover{
-	color: #fa5e74;
-  text-decoration: none;
-}
-
-
-
-/* a.nav-link {
-  position: relative;
-  color: #000;
-  text-decoration: none;
-}
-
-a.nav-link:hover {
-  color: #000;
-}
-
-a.nav-link::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #4c6c8c;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out 0s;
-} */
-
-/* for the animation to appear */
-/* a.nav-link:hover::before {
-  visibility: visible;
-  transform: scaleX(1);
-}
-
-a.active::after {
-  position: relative;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #4c6c8c;
-  border-bottom:1px solid red;
-}
-
-.active{
-  color: red !important;
-} */
-
-html {
-  scroll-padding-top: 80px; /* height of sticky header */
-}
-
-
-
-/* a {
-  position: relative;
-  text-decoration: none;
-}
-
-a:hover::after {
-  content: "";
-  position: absolute;
-  left: 25%;
-  right: 25%;
-  bottom: 0;
-  border: 1px solid red;
-} */
-
-/* .active{
-  text-decoration: underline;
-  border-bottom: 4rem;
-  background-color: red;
-} */
-
 
 /* Define the shape and color of the hamburger lines */
-/* .navbar-toggler span {
+.navbar-toggler span {
     display: block;
     background-color: #4f4f4f;
     height: 3px;
@@ -104,13 +12,196 @@ a:hover::after {
     opacity: 1;
     transition: all 0.35s ease-out;
     transform-origin: center left;
-} */
+}
 
 
 /* top line needs a little padding */
-/* .navbar-toggler span:nth-child(1) {
+.navbar-toggler span:nth-child(1) {
     margin-top: 0.3em;
-} */
+}
+
+/**
+ * Animate collapse into X.
+ */
+
+/* top line rotates 45 degrees clockwise and moves up and in a bit to close the center of the X in the center of the button */
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    transform: translate(15%, -33%) rotate(45deg);
+}
+/* center line goes transparent */
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    opacity: 0;
+}
+/* bottom line rotates 45 degrees counter clockwise, in, and down a bit to close the center of the X in the center of the button  */
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    transform: translate(15%, 33%) rotate(-45deg) ;
+}
+
+
+/**
+ * Animate collapse open into hamburger menu
+ */
+
+/* top line moves back to initial position and rotates back to 0 degrees */
+.navbar-toggler span:nth-child(1) {
+    transform: translate(0%, 0%) rotate(0deg) ;
+}
+/* middle line goes back to regular color and opacity */
+.navbar-toggler span:nth-child(2) {
+    opacity: 1;
+}
+/* bottom line goes back to initial position and rotates back to 0 degrees */
+.navbar-toggler span:nth-child(3) {
+    transform: translate(0%, 0%) rotate(0deg) ;html {
+  scroll-padding-top: 80px; /* height of sticky header */
+}
+
+.background-image{
+  background-color: #4c6c8c;
+  background-size: cover;
+  background-position: center;
+  padding: 10rem;
+  background-attachment: fixed;
+}
+
+h1{
+  color: white;
+}
+
+h2{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.8rem !important;
+  margin: 1.5rem;
+}
+
+.skew {
+  border-left: 1px solid #4c6c8c;
+  padding-top: 40px;
+  padding-left: 40px;
+  transform: skewX(-40deg);
+  display: visible-md;
+}
+
+.skew p{
+  transform: skewX(40deg);
+}
+
+/* navbar : shadow */
+.navbar{
+	box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 12%);
+}
+
+/* navbar : opacity */
+nav.bg-light{
+	background: #fff !important;
+	opacity: 0.95;
+}
+
+.nav-link{
+	font-weight: 400;
+}
+
+.active{
+  color: #4c6c8c !important;
+	font-weight: 500;
+}
+
+section ul{
+  display: flex;
+	margin: 0 auto 35px auto;
+  list-style: none;
+  text-align: center;
+  background: #fff;
+  border-radius: 50px;
+  padding: 2px 15px;
+  box-shadow: 0px 2px 15px rgb(0 0 0 / 8%);
+}
+
+section ul li{
+  letter-spacing: 1px;
+	cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px 8px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #5a656e;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+li.active{
+	color: #fa5e74 !important;
+}
+
+/* top+bottom=6 / right+left=0 */
+section{
+	padding: 4rem 0rem;
+}
+
+.photographes-link, .mail-link, .navbar-rs-link{
+	color: #4c6c8c;
+	text-decoration: none;
+}
+
+.photographes-link:hover, .mail-link:hover, .navbar-rs-link:hover{
+	color: #fa5e74;
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.back-to-top {
+    position: fixed;
+    /* visibility: hidden; */
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 9999;
+    background: #4c6c8c;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    /* transition: all 0.4s; */
+}
+
+.back-to-top i {
+    font-size: 24px;
+    color: #fff;
+    line-height: 0;
+}
+
+#footer {
+    background: #fff;
+    padding: 24px 0;
+    font-size: 14px;
+    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 12%);
+}
+
+/* Define the shape and color of the hamburger lines */
+.navbar-toggler span {
+    display: block;
+    background-color: #4f4f4f;
+    height: 3px;
+    width: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    left: 0;
+    opacity: 1;
+    transition: all 0.35s ease-out;
+    transform-origin: center left;
+}
+
+
+/* top line needs a little padding */
+.navbar-toggler span:nth-child(1) {
+    margin-top: 0.3em;
+}
 
 /**
  * Animate collapse into X.
@@ -145,4 +236,3 @@ a:hover::after {
 /* bottom line goes back to initial position and rotates back to 0 degrees */
 .navbar-toggler span:nth-child(3) {
     transform: translate(0%, 0%) rotate(0deg) ;
-}
