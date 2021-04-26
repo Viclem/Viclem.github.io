@@ -35,6 +35,8 @@ TO DO :
 - [x] mettre en forme le mail reçu sur Nalouette
 - [ ] confirm_message : réussir à centrer verticalement automatiquement
 - [ ] pj : pouvoir en sélectionner de différents dossiers
+- [ ] modals : ajout de videos ?
+- [ ] contact : rs : noms des comptes ?
 
 
 plus besoin :
