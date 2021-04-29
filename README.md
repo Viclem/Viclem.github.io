@@ -36,7 +36,8 @@ TO DO :
 - [ ] confirm_message : réussir à centrer verticalement automatiquement
 - [ ] pj : pouvoir en sélectionner de différents dossiers
 - [ ] modals : ajout de videos ?
-- [ ] contact : rs : noms des comptes ?
+- [ ] contact : rs : noms des comptes
+- [ ] ajouter TFX Photos
 
 
 plus besoin :

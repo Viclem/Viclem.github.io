@@ -37,7 +37,7 @@
   $mail->Body = "
             <html>
                 <body>
-                <img src='https://github.com/Viclem/Viclem.github.io/blob/main/images/Logo/Nalouette_logo.png?raw=true' width='40'/>
+                <img src='https://github.com/Viclem/Viclem.github.io/blob/main/images/Logos/Nalouette.png?raw=true' width='40'/>
                 <h3>Nouveau message via nalouettecreation.com</h3>
                   <table style='width:800px;'>
                       <tbody>
