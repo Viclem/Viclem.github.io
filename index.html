@@ -223,7 +223,7 @@ GALERIE PHOTOS
 // Maily 2019
           ["indiv_Maily_19", "Jupette individuelle", "Maïly, La Dracénoise GR, Draguignan",
           "Voile chair, lycra rouge, dentelle de Calais arlequin, résille vert fluo et saumon <br /> 610 strass",
-          "modal_2_",
+          "modal_2_1_1_2_",
           ["/2019/indiv_Maily/indiv_maily_1.jpg", "/2019/indiv_Maily/indiv_maily_7.jpg", "/2019/indiv_Maily/indiv_maily_5.jpg", "/2019/indiv_Maily/indiv_maily_4.jpg", "/2019/indiv_Maily/indiv_maily_3.jpg", "/2019/indiv_Maily/indiv_maily_6.jpg"]],
 
 // Lou-Elise 2019
@@ -272,7 +272,7 @@ GALERIE PHOTOS
           ["duonatTC_ClioClub_19", "Jupette duo nationale toutes catégories", "Clio-Club, St-Georges/Eure",
           "Voile résille chair, lycra rouge orangé, roy et marine <br /> 1120 strass <br /> Création réalisée en 2 exemplaires",
           "modal_2_",
-          ["/2019/duonatTC_ClioClub/duonat_clioclub_1.jpg", "/2019/duonatTC_ClioClub/duonat_clioclub_2.jpg", "/2019/duonatTC_ClioClub/duonat_clioclub_3.jpg", "/2019/duonatTC_ClioClub/duonat_clioclub_4.jpg"]],
+          ["/2019/duonatTC_ClioClub/duonat_clioclub_1.jpg", "/2019/duonatTC_ClioClub/duonat_clioclub_2.jpg", "/2019/duonatTC_ClioClub/duonat_clioclub_3.jpg", "/2019/duonatTC_ClioClub/duonat_clioclub_4.jpg", "/2019/duonatTC_ClioClub/duonat_clioclub_5.jpg"]],
 
 // Elan Gymnique ensemble seniors 2019
           ["ensseniors_ElanGymnique_19", "Jupette ensemble seniors", "Elan Gymnique",
@@ -338,7 +338,7 @@ GALERIE PHOTOS
           ["ens_ElanGymnique_18", "Jupette ensemble", "Elan Gymnique",
           "Voile chair, lycra jaune fluo, tulle violet, appliques en lycra violet foncé <br /> 210 strass",
           "modal_2_",
-          ["/2018/ens_ElanGymnique/ens_elangymnique_1.jpg", "/2018/ens_ElanGymnique/ens_elangymnique_2.jpg", "/2018/ens_ElanGymnique/ens_elangymnique_3.jpg"]],
+          ["/2018/ens_ElanGymnique/ens_elangymnique_1.jpg", "/2018/ens_ElanGymnique/ens_elangymnique_2.jpg"]],
 
 // Clara 2018
           ["indiv_Clara_18", "Jupette individuelle", "Clara",
@@ -401,6 +401,25 @@ GALERIE PHOTOS
   }
   else if (agencement == "modal_1_2_"){
     modal_1_2_(images);
+  }
+  else if (agencement == "modal_2_1_1_2_"){
+    modal_2_1_1_2_(images);
+  }
+
+  else if (agencement == "modal_2_1_2_"){
+    modal_2_1_2_(images);
+  }
+
+  else if (agencement == "modal_3_"){
+    modal_3_(images);
+  }
+
+  else if (agencement == "modal_3_1_2_"){
+    modal_3_1_2_(images);
+  }
+
+  else{
+    console.log("Rio : ce type d'agencement n'est pas vérifié dans 'if (agencement) etc'")
   }
 
   document.write("\
