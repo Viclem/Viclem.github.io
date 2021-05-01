@@ -13,547 +13,174 @@
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
 
         <!-- My CSS -->
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="prouti.css" />
 
         <!-- Bootstrap icons -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
 
     </head>
 
-    <body>
+<body>
 
-<!-- INDISPENSABLE POUR FONCTIONNEMENT DE L'ANIMATION TOGGLE -->
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
-<!-- ========================================================
-BANNIERE D'ACCUEIL NALOUETTE
-======================================================== -->
-<div class="background-image px-4 py-5 text-center link-active-scroll" style="background-image: url('./images/accueil.jpg');" id="accueil">
-	<div class="py-5 mt-3">
-		<h1 class="mt-5 display-3">Nalouette</h1>
-		<p class="display-6 fs-5 mb-4 text-white">
-			création sur mesure
-			<br />
-			 tenues artistiques, sportives et accessoires
-		</p>
-		<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-			<a class="btn btn-outline-light btn-lg px-4" href="#contact" role="button">Demander un devis</a>
-		</div>
-	</div>
-</div>
+  <!-- INDISPENSABLE POUR FONCTIONNEMENT DE L'ANIMATION TOGGLE -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
-<!-- ========================================================
-BARRE DE NAVIGATION MENU
-======================================================== -->
-<nav class="navbar navbar-expand-sm sticky-top navbar-light bg-light">
-	<div class="container">
-		<a href="#" class="navbar-brand">
-			<!-- logo Nalouette only desktop taille 60px -->
-			<img src="./images/Logos/Nalouette_logo.png" class="d-none d-sm-block" width="60">
-			<!-- logo Nalouette only mobile taille 40px -->
-			<img src="./images/Logos/Nalouette_logo.png" class="d-sm-none d-block" width="40">
-		</a>
-		<!-- <a class="navbar-toggler collapsed border-0" type="button" data-toggle="collapse" data-target="#navbarMenu">
-      <span class="navbar-toggler-icon"></span>
-    </a> -->
-    <a class="navbar-toggler collapsed border-0" type="button" data-toggle="collapse" data-target="#navbarMenu">
-        <span> </span>
-        <span> </span>
-        <span> </span>
-    </a>
-		<div class="collapse navbar-collapse" id="navbarMenu">
-			<ul class="navbar-nav me-auto text-uppercase text-end pe-2" style="line-height: 14px;  letter-spacing: 0.04rem;">
-				<li class="nav-item"><a class="nav-link active" href="#accueil">Accueil</a></i>
-				<li class="nav-item"><a class="nav-link" href="#realisations">Réalisations</a></li>
-				<li class="nav-item"><a class="nav-link" href="#conseils">Conseils</a></li>
-				<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-			</ul>
-			<div class="d-none d-sm-block">
-				<a href="https://facebook.com/nalouette/" target="_blank"><i class="bi bi-facebook navbar-rs-link"></i></a>
-				<a href="https://www.instagram.com/nalouette28/?igshid=xbfoc60naeft" target="_blank"><i class="bi bi-instagram navbar-rs-link"></i></a>
-			</div>
-		</div>
-	</div>
-</nav>
+        <!-- ========================================================
+        BANNIERE D'ACCUEIL NALOUETTE
+        ======================================================== -->
+        <div class="background-image px-4 py-5 text-center link-active-scroll" style="background-image: url('./images/accueil.jpg');" id="accueil">
+        	<div class="py-5 mt-3">
+        		<h1 class="mt-5 display-3">Nalouette</h1>
+        		<p class="display-6 fs-5 mb-4 text-white">
+        			création sur mesure
+        			<br />
+        			 tenues artistiques, sportives et accessoires
+        		</p>
+        		<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        			<a class="btn btn-outline-light btn-lg px-4" href="#contact" role="button">Demander un devis</a>
+        		</div>
+        	</div>
+        </div>
 
-<!-- ========================================================
-GALERIE PHOTOS
-======================================================== -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- GALLERY FILTER QUI FONCTIONNE = A TESTER EN AJOUTANT LE RESTE DE INDEX.HTML -->
 <section class="container link-active-scroll" id="realisations">
   <h2 class="display-6">Mes réalisations</h2>
   <div class="row">
-    <div class="col-lg-12 d-flex justify-content-center">
+    <!-- <div class="col-lg-12 filtre" id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('2020')"> 2020</button>
+      <button class="btn" onclick="filterSelection('2019')"> 2019</button>
+      <button class="btn" onclick="filterSelection('2018')"> 2018</button>
+      <button class="btn" onclick="filterSelection('albums')"> album photos</button>
+    </div> -->
+    <div class="col-lg-12 d-flex justify-content-center" id="myBtnContainer">
       <ul>
-        <li class="list active" data-filter="all">Tout</li>
-        <li class="list" data-filter="2021">2021</li>
-        <li class="list" data-filter="2020">2020</li>
-        <li class="list" data-filter="2019">2019</li>
+        <li class="list active" onclick="filterSelection('2020')">2020</li>
+        <li class="list" onclick="filterSelection('2019')">2019</li>
+        <li class="list" onclick="filterSelection('2018')">2018</li>
+        <li class="list" onclick="filterSelection('archives')">album photos</li>
       </ul>
     </div>
   </div>
-  <div class="row g-3 product">
-    <script>
-        var images_filters_modals = [
-          ["/2021/indiv_Louane/indiv_louane_1.jpg", "2021", "indiv_Louane"],
-          ["/2021/duonatTC_ClioClub/duonat_clioclub_1.jpg", "2021", "duonatTC_ClioClub"],
-          ["/2021/indiv_Lou-Elise/indiv_louelise_2.jpg", "2021", "indiv_Lou-Elise"],
-          ["/2021/ens_LesLucioles/ens_leslucioles_1.jpg", "2021", "ens_LesLucioles"],
-
-          ["/2021/indiv_Aureane/indiv_aureane_1.jpg", "2021", "indiv_Aureane"],
-          ["/2021/indiv_Fany/indiv_fany_1.jpg", "2021", "indiv_Fany"],
-          ["/2021/indiv_Maily/indiv_maily_1.jpg", "2021", "indiv_Maily"],
-          ["/2021/indiv_Celia/indiv_celia_1.jpg", "2021", "indiv_Celia"],
-
-          ["/2021/indiv_Margaux/indiv_margaux_1.jpg", "2021", "indiv_Margaux"],
-          ["/2021/indiv_Athenais/indiv_athenais_1.jpg", "2021", "indiv_Athenais"],
-          ["/2021/indiv_Liza/indiv_liza_1.jpg", "2021", "indiv_Liza"],
-          ["/2021/indiv_Adeline/indiv_adeline_3.jpg", "2021", "indiv_Adeline"],
-
-          ["/2020/indiv_Maily/indiv_maily_1.jpg", "2020", "indiv_Maily"],
-        ]
-
-        var id_titre_soustitre_description_agencement_images = [
-          ["indiv_Louane", "Jupette individuelle", "Louane",
-          "Voile chair, lycra rouge, dentelle noire <br /> + de 700 strass",
-          "modal_2_",
-          ["/2021/indiv_Louane/indiv_louane_1.jpg", "/2021/indiv_Louane/indiv_louane_2.jpg", "/2021/indiv_Louane/indiv_louane_3.jpg", "/2021/indiv_Louane/indiv_louane_4.jpg"]],
-
-          ["duonatTC_ClioClub", "Jupette duo nationale toutes catégories", "Clio-Club, St-Georges/Eure",
-          "Voile chair, velours bleu, lycra bleu et blanc, résille bleue <br /> Plumes tons de bleu <br /> + de 700 strass <br /> Création réalisée en 2 exemplaires",
-          "modal_2_",
-          ["/2021/duonatTC_ClioClub/duonat_clioclub_1.jpg", "/2021/duonatTC_ClioClub/duonat_clioclub_2.jpg", "/2021/duonatTC_ClioClub/duonat_clioclub_3.jpg", "/2021/duonatTC_ClioClub/duonat_clioclub_4.jpg"]],
-
-          ["indiv_Lou-Elise", "Jupette individuelle", "Lou-Élise, Clio-Club, St-Georges/Eure",
-          "Voile chair uni, lycra brillant noir, lycra carminio, tulle noir et dentelle rouge <br /> 620 strass",
-          "modal_1_2_",
-          ["/2021/indiv_Lou-Elise/indiv_louelise_1.jpg", "/2021/indiv_Lou-Elise/indiv_louelise_2.jpg", "/2021/indiv_Lou-Elise/indiv_louelise_3.jpg", "/2021/indiv_Lou-Elise/indiv_louelise_4.jpg"]],
-
-          ["ens_LesLucioles", "Jupette ensemble", "Les Lucioles, Luisant",
-          "Voile chair, lycra blanc et fuschia, résille fuschia <br /> Plumes et touches de peintures <br /> + de 700 strass <br /> Création réalisée en 4 exemplaires",
-          "modal_2_",
-          ["/2021/ens_LesLucioles/ens_leslucioles_1.jpg", "/2021/ens_LesLucioles/ens_leslucioles_2.jpg", "/2021/ens_LesLucioles/ens_leslucioles_3.jpg", "/2021/ens_LesLucioles/ens_leslucioles_4.jpg"]],
-
-          ["indiv_Aureane", "Jupette individuelle", "Auréane, Clio-Club, St-Georges/Eure",
-          "Voile chair, lycra blanc, lilas, lavande et violet, tulle lavande <br /> 1780 strass",
-          "modal_2_",
-          ["/2021/indiv_Aureane/indiv_aureane_1.jpg", "/2021/indiv_Aureane/indiv_aureane_2.jpg", "/2021/indiv_Aureane/indiv_aureane_3.jpg", "/2021/indiv_Aureane/indiv_aureane_4.jpg", "/2021/indiv_Aureane/indiv_aureane_5.jpg"]],
-
-          ["indiv_Fany", "Jupette individuelle", "Fany, Clio-Club, St-Georges/Eure",
-          "Voile chair / lycra marine et prussia <br /> 860 strass",
-          "modal_2_",
-          ["/2021/indiv_Fany/indiv_fany_1.jpg", "/2021/indiv_Fany/indiv_fany_2.jpg", "/2021/indiv_Fany/indiv_fany_3.jpg", "/2021/indiv_Fany/indiv_fany_4.jpg"]],
-
-          ["indiv_Maily", "Jupette individuelle", "Maïly, La Dracénoise GR, Draguignan",
-          "Voile chair / lycra jaune fluo et bordeaux / tulle jaune fluo et rose fluo <br /> 1200 strass",
-          "modal_2_",
-          ["/2021/indiv_Maily/indiv_maily_1.jpg", "/2021/indiv_Maily/indiv_maily_4.jpg", "/2021/indiv_Maily/indiv_maily_2.jpg"]],
-
-          ["indiv_Celia", "Jupette individuelle", "Célia, Clio-Club, St-Georges/Eure",
-          "Voile chair, lycra rose pâle et bordeaux, tulle camelia <br /> 870 strass",
-          "modal_2_",
-          ["/2021/indiv_Celia/indiv_celia_1.jpg", "/2021/indiv_Celia/indiv_celia_4.jpg", "/2021/indiv_Celia/indiv_celia_2.jpg", "/2021/indiv_Celia/indiv_celia_3.jpg"]],
-
-          ["indiv_Margaux", "Jupette individuelle", "Margaux",
-          "Voile chair / lycra vanille, prussia et turquoise / tulle bleu <br /> 800 strass",
-          "modal_1_",
-          ["/2021/indiv_Margaux/indiv_margaux_1.jpg", "/2021/indiv_Margaux/indiv_margaux_2.jpg", "/2021/indiv_Margaux/indiv_margaux_3.jpg"]],
-
-          ["indiv_Athenais", "Jupette individuelle", "Athénaïs, Clio-Club, St-Georges/Eure",
-          "Voile chair / lycra jaune et prussia / tulle bleu / résille jaune fluo <br /> 1420 strass",
-          "modal_1_",
-          ["/2021/indiv_Athenais/indiv_athenais_1.jpg", "/2021/indiv_Athenais/indiv_athenais_2.jpg", "/2021/indiv_Athenais/indiv_athenais_3.jpg", "/2021/indiv_Athenais/indiv_athenais_4.jpg"]],
-
-          ["indiv_Liza", "Jupette individuelle", "Liza",
-          "Voile chair / lycra vert fluo, vert flèche et rouge / lycra multipoint doré / tulle vert fluo, jaune et orange tango <br /> 420 strass",
-          "modal_1_",
-          ["/2021/indiv_Liza/indiv_liza_1.jpg", "/2021/indiv_Liza/indiv_liza_2.jpg"]],
-
-          ["indiv_Adeline", "Jupette individuelle", "Adeline, Les Lucioles, Luisant",
-          "Voile chair / lycra tons de bleu et noir <br /> 1530 strass",
-          "modal_1_",
-          ["/2021/indiv_Adeline/indiv_adeline_3.jpg"]],
-        ]
-
-        for (var i=0; i<images_filters_modals.length; i=i+1) {
-          document.write("<div class=\"col-lg-3 col-md-4 col-sm-6 col-6 filter "+
-          images_filters_modals[i][1]+"\"><a href=\"#\" data-bs-toggle=\"modal\" data-bs-target=\"#"+
-          images_filters_modals[i][2]+"\"><img src=\"./images"+
-          images_filters_modals[i][0]+"\" alt=\"\" class=\"img-fluid\"></a></div>");
-        }
-      </script>
-  </div>
 </section>
 
-<script type="text/javascript" src="./modals.js"></script>
-
-<script>
-  for (var i=0; i<id_titre_soustitre_description_agencement_images.length; i=i+1) {
-
-    document.write("<div class=\"modal fade\" id=\""+id_titre_soustitre_description_agencement_images[i][0]+"\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\
-     <div class=\"modal-dialog modal-lg\">\
-       <div class=\"modal-content\">\
-         <div class=\"container\">\
-           <div class=\"modal-header\" style=\"border: 0\">\
-             <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>\
-           </div>\
-           <div class=\"modal-body\">\
-             <div class=\"row\">\
-               <div class=\"col-12\">\
-                 <p class=\"display-6 fs-5 text-uppercase m-0\" id=\"exampleModalLabel\">\
-                   <strong>"+id_titre_soustitre_description_agencement_images[i][1]+"</strong>\
-                 </p>\
-                 <p class=\"display-6 fs-6 text-uppercase\">\
-                   "+id_titre_soustitre_description_agencement_images[i][2]+"\
-                 </p>\
-                 <p class=\"fw-light mb-0\" style=\"font-size: 14px;\">\
-                   "+id_titre_soustitre_description_agencement_images[i][3]+"\
-                 </p>\
-               </div>\
-             </div>")
-
-  agencement = id_titre_soustitre_description_agencement_images[i][4]
-  images = id_titre_soustitre_description_agencement_images[i][5]
-  if (agencement == "modal_2_"){
-    modal_2_(images);
-  }
-  else if (agencement == "modal_1_"){
-    modal_1_(images);
-  }
-  else if (agencement == "modal_1_2_"){
-    modal_1_2_(images);
-  }
-
-  document.write("\
-             <div class=\"modal-footer justify-content-center my-2\" style=\"border: 0\">\
-               <button type=\"button\" class=\"btn btn-sm text-uppercase text-white\" style=\"background-color: #4c6c8c;\" data-bs-dismiss=\"modal\">Fermer</button>\
-             </div>\
-           </div>\
-         </div>\
-       </div>\
-     </div>\
-   </div>")}
-</script>
-
-
-
-<!-- ========================================================
-QUI SUIS-JE ?
-======================================================== -->
-<section class="bg-light">
-	<div class="container">
-		<div class="row align-items-center">		<!-- align-items-center = alignement vertical -->
-			<div class="col-md-4 col-5 gx-5">
-        <img src="./images/quisuisje.jpg" class="img-fluid" style="border-radius:50%;" alt="quisuisje">
-			</div>
-			<div class="col-md-8 col-12 gx-5">
-				<h2 class="display-6">Qui suis-je ?</h2>
-				<p style="text-align: justify;">
-					Nalouette est une auto-entreprise créée en août 2012.
-					<br />
-					Longtemps passionnée de couture et de gymnastique rythmique grâce à mes filles, j’ai eu l’idée de proposer mes services pour réaliser des justaucorps. Avec des modèles très simples au début de mon activité, mon offre s’est étoffée au fil des années avec des jupettes plus complexes, et une diversité des accessoires proposés. Aujourd’hui, Nalouette affiche un beau parcours grâce à votre confiance, et de très belles jupettes mises en lumière lors des compétitions de Gymnastique Rythmique.
-				</p>
-			</div>
-		</div>
-	</div>
-</section>
-
-
-<!-- ========================================================
-# CONSEILS
-======================================================== -->
-<section id="conseils">
-	<div class="container link-active-scroll">
-		<div class="row">
-			<!-- Techniques de création -->
-			<div class="col-md-6 col-12 gx-5" style="text-align: justify;">
-				<div class="text-center">
-					<i class="bi bi-cup-straw" style="font-size: 2rem; color: #4c6c8c;"></i>
-				</div>
-				<h2 class="display-6">Techniques de création</h2>
-				<p>Toutes les créations sont réalisées en tissus lycra® élastiques.</p>
-				<p>L’assemblage est fait avec une surjeteuse, en point de surjet 4 fils avec point de sécurité intégré.</p>
-				<p>Les strass sont collés (technique Hotfix) ou cousus main.</p>
-				<p>Les créations nécessitent beaucoup d’attention, elles sont fragiles et demandent à être manipulées avec soin.</p>
-			</div>
-			<!-- Conseils d'entretien -->
-      <div class="col-md-6 col-12 gx-5" style="text-align: justify;">
-        <div class="text-center">
-          <i class="bi bi-box-seam" style="font-size: 2rem; color: #fa5e74;"></i>
-        </div>
-        <h2 class="display-6">Conseils d'entretien</h2>
-        <p>· Laver le justaucorps à la main et à l’eau froide, avec une lessive liquide douce (lessive pour la laine)
-          <br />· Essorer délicatement dans une serviette éponge, puis laisser sécher à l’air libre sur un cintre
-          <br />· Ne pas laisser tremper
-          <br />· Ne pas frotter
-          <br />· Ne pas exposer au soleil
-          <br />· Ne pas mettre au sèche-linge
-        </p>
-          <p>Il est possible d’utiliser une lingette absorbante de couleur, certains tissus de couleur vive pouvant en effet être amenés à dégorger dans l’eau de lavage.</p>
+  <!-- Portfolio Gallery Grid -->
+  <div class="row">
+    <div class="column 2020">
+      <div class="content">
+        <img src="./images/galerie/Lou-Elise_5.jpg" alt="Mountains" style="width:100%">
       </div>
     </div>
-</section>
-
-<!-- ========================================================
-# CONTACT
-======================================================== -->
-<section class="link-active-scroll bg-light" id="contact">
-  <div class="container">
-      <div class="row text-md-end text-center mb-5">   <!-- texte aligné à gauche jusqu'à md puis centré --->
-        <!-- CONTACTEZ-MOI -->
-        <div class="col-md-7 col-12">
-          <h2 class="display-6">Contactez-moi</h2>
-        </div>
-        <!-- RS + MAIL / BLOCK ON SM -->
-        <div class="col-md-5 col-12 skew text-md-start text-center d-md-block d-none">
-          <p>
-            <a href="https://facebook.com/nalouette/" target="_blank"><img src="./images/Logos/facebook.png" width= 25></a>
-            <a href="https://www.instagram.com/nalouette28/?igshid=xbfoc60naeft" target="_blank"><img src="./images/Logos/instagram.png" width= 25></a>
-          </p>
-          <p>
-            <a href="mailto:nalouette28@gmail.com" class="mail-link display-6 fs-5">nalouettecreation@gmail.com</a>
-          </p>
-        </div>
-        <!-- RS + MAIL / SM ONLY -->
-        <div class="col-12 d-block d-md-none">
-          <div>
-            <a href="https://facebook.com/nalouette/" target="_blank"><img src="./images/Logos/facebook.png" width= 25></a>
-            <a href="https://www.instagram.com/nalouette28/?igshid=xbfoc60naeft" target="_blank"><img src="./images/Logos/instagram.png" width= 25></a>
-          </div>
-          <div class="">
-            <a href="mailto:nalouette28@gmail.com" class="mail-link display-6 fs-5 ">nalouettecreation@gmail.com</a>
-          </div>
-        </div>
+    <div class="column 2020">
+      <div class="content">
+        <img src="./images/galerie/Zoe_2.jpg" alt="Lights" style="width:100%">
       </div>
-  	<!-- FORM -->
-    <form action="send_form.php" method="post" enctype="multipart/form-data">
-    	<div class="row justify-content-center">   <!-- = centré -->
-    		<!-- 1ERE COLONNE "INFOS" -->
-    		<div class="col-lg-4 col-12">   <!-- gx-5 = espacement de la bordure -->
-    			<div class="form-floating mb-2">   <!-- form-floating = dans la case -->
-    				<input type="text" name="name" class="form-control form-control-sm" id="name">   <!-- form-control = mise en forme générale de la zone (dans un cadre etc) / form-control-sm = smaller font-size on sm -->
-    				<label for="name">Nom</label>   <!-- = nom de la zone -->
-    			</div>
-    			<div class="form-floating mb-2">
-    				<input type="email" name="email" class="form-control form-control-sm" id="email">
-    				<label for="email">Email</label>
-    			</div>
-    			<div class="form-floating mb-2">
-    				<input type="tel" name="phone" class="form-control form-control-sm" id="phone">
-    				<label for="phone">Téléphone</label>
-    			</div>
-    		</div>
-    		<!-- 2EME COLONNE "MESSAGE + PJ + ENVOYER" -->
-    		<div class="col-lg-6 col-12">
-    			<div class="form-floating">
-    				<textarea name="message" class="form-control form-control-sm" id="message" style="height: 150px"></textarea>   <!-- style height = hauteur de la text-area -->
-    				<label for="message">Message</label>
-    			</div>
-    			<div class="col-12 mt-3">
-    				<label for="pj" class="form-label form-control-sm">   <!-- form-label = texte inclu dans le form -->
-    					Ajouter une pièce jointe :
-    					<br />
-    					<p class="fst-italic" style="font-size: 12px">
-    						Vous pouvez sélectionner plusieurs fichiers.
-    						<br />
-    						Les fichiers sélectionnés doivent se situer dans un même dossier.
-    					</p>
-    				</label>
-    			</div>
-    			<div class="col-md-8 col-12">
-    				<input class="form-control form-control-sm" type="file" name="attachment[]" id="attachment" multiple>
-    				<div class="mt-1" style="font-size: 12px" id="selectedfiles"></div>   <!-- font-size = taille d'affichage des noms des PJ -->
-          </div>
-          <div class="text-lg-start text-center my-4">   <!-- = bouton aligné à gauche jusqu'à lg puis centré -->
-    				<button type="submit" class="btn text-white text-uppercase px-3" style="background-color: #4c6c8c">Envoyer</button>   <!-- px-3 = ~largeur du bouton -->
-    			</div>
-    		</div>
-    	</div>
-    </form>
+    </div>
+    <div class="column 2020">
+      <div class="content">
+        <img src="./images/galerie/Emma_1.jpg" alt="Nature" style="width:100%">
+      </div>
+    </div>
+
+    <div class="column 2019">
+      <div class="content">
+        <img src="./images/galerie/Aureane_1.jpg" alt="Car" style="width:100%">
+      </div>
+    </div>
+    <div class="column 2019">
+      <div class="content">
+        <img src="./images/galerie/Celia_2.jpg" alt="Car" style="width:100%">
+      </div>
+    </div>
+    <div class="column 2019">
+      <div class="content">
+        <img src="./images/galerie/ChloeJ_1.jpg" alt="Car" style="width:100%">
+      </div>
+    </div>
+    <div class="column 2018">
+      <div class="content">
+        <img src="./images/galerie/Nina_6.jpg" alt="People" style="width:100%">
+      </div>
+    </div>
+    <div class="column 2018">
+      <div class="content">
+        <img src="./images/galerie/indiv_1.jpg" alt="People" style="width:100%">
+      </div>
+    </div>
+    <div class="column 2018">
+      <div class="content">
+        <img src="./images/galerie/Lisa_1.jpg" alt="People" style="width:100%">
+      </div>
+    </div>
+    <!-- END GRID -->
   </div>
 </section>
 
-<!-- ========================================================
-MERCI LES PHOTOGRAPHES
-======================================================== -->
-<section>
-	<div class="container text-center gx-5">
-		<p>
-			Merci aux photographes qui mettent en lumière mes réalisations :
-		</p>
-		<div class="row fw-light">
-			<div class="col-md-2 col-12">
-				<a class="photographes-link" href="https://www.facebook.com/AnniePhotographies/" target="_blank">Annie Photographies</a>
-			</div>
-			<div class="col-md-2 col-12">
-				<a class="photographes-link" href="https://www.facebook.com/ngtuan41350/" target="_blank">N’Guyen Photographies</a>
-			</div>
-			<div class="col-md-2 col-12">
-				<a class="photographes-link" href="https://www.facebook.com/profile.php?id=100044212970068" target="_blank">Cybile C. Photography</a>
-			</div>
-			<div class="col-md-2 col-12">
-				<a class="photographes-link" href="https://href.li/?https://facebook.com/HeloGym/" target="_blank">AdlB</a>
-			</div>
-			<div class="col-md-2 col-12">
-				<a class="photographes-link" href="https://fr-fr.facebook.com/michellephotographe2/" target="_blank">Michel Le Photographe</a>
-			</div>
-			<div class="col-md-2 col-12">
-				<a class="photographes-link" href="https://www.facebook.com/" target="_blank">Denis Guillon</a>
-			</div>
-		</div>
-	</div>
-</section>
 
-
-<!-- ========================================================
-FOOTER
-======================================================== -->
-<footer id="footer">
-  <div class="container">
-    <p class="display-6 text-end" style="font-size: 10px"><strong>
-      <?php
-      $file = $_SERVER["SCRIPT_NAME"];
-      $break = Explode('/', $file);
-      $pfile = $break[count($break) - 1];
-      //echo $pfile;
-      echo "Mise à jour : " .date("d.m.Y",filemtime($pfile));
-      ?>
-    </strong></p>
-  </div>
-</footer>
-
-<!-- ===== FLECHE RETOUR HAUT DE PAGE ===== -->
-<div class="d-none d-md-block">
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center active">
-    <i class="bi bi-arrow-up-short"></i>
-  </a>
-</div>
-
-<!-- ================================================================================================================ -->
-
-<!-- Bootstrap JavaScript -->
-<!-- <script src="./bootstrap/js/bootstrap.bundle.min.js"></script> -->
-
-<!-- Jquery -->
-<!-- <script src="./bootstrap/js/jquery.min.js"></script> -->
-
-<!-- CODE TO CLOSE THE TOGGLE ON CLIC -->
-    <!-- <script>
-        $('.navbar-collapse a').click(function(){
-        $(".navbar-collapse").collapse('hide');
-        });
-    </script> -->
-
-<!-- CLOSE THE TOGGLE BY CLICKING ANYWHERE ON THE SCREEN -->
-    <script>
-        $(document).click(function(){
-        $(".navbar-collapse").collapse('hide');
-        });
-    </script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-
-  $(".list").click(function(){
-      var value = $(this).attr('data-filter');
-
-      if(value == "all")
-      {
-          //$('.filter').removeClass('hidden');
-          $('.filter').show('1000');
-      }
-      else
-      {
-//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-          $(".filter").not('.'+value).hide('3000');
-          $('.filter').filter('.'+value).show('3000');
-
-      }
-  });
-
-  if ($(".list").removeClass("active")) {
-$(this).removeClass("active");
+<script>
+filterSelection("2020") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
 }
-$(this).addClass("active");
 
-});
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("list");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
 </script>
 
-<!-- ACTIVE LINK -->
-    <script>
-    	/* Code for changing activelink on clicking */
-    	var btns =$("#navbarMenu .navbar-nav .nav-link");
-    	for (var i = 0; i < btns.length; i++) {
-    		btns[i].addEventListener("click",function () {
-    			var current = document.getElementsByClassName("active");
-    			current[0].className = current[0].className.replace(" active", "");
-    			this.className += " active";
-    		});
-    	}
-    	/* Code for changing activelink on Scrolling */
-    	$(window).scroll(function () {
-    		var distance = $(window).scrollTop();
-    		$('.link-active-scroll').each(function (i) {
-    			if ($(this).position().top<= distance + 180) {
-    				$('.navbar-nav a.active').removeClass('active');
-    				$('.navbar-nav a').eq(i).addClass('active');
-    			}
-    		});
-    	}
-    	).scroll();
-    </script>
 
-<!-- GALLERY FILTER -->
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $('.list').click(function(){
-          const value = $(this).attr('data-filter');
-          if (value == 'all'){
-            $('.filter').show('1000');
-          }
-          else{
-            $('.filter').not('.'+value).hide('1000');
-            $('.filter').filter('.'+value).show('1000');
-          }
-        })
-        // add active class on selected item
-        $('.list').click(function(){
-          $(this).addClass('active').siblings().removeClass('active');
-        })
-      })
-    </script>
-
-<!-- FORM FILES INPUT : pour afficher les noms des fichiers ajoutés par l'utilisateur -->
-    <script type="text/javascript">
-    	var selDiv = "";
-
-    	document.addEventListener("DOMContentLoaded", init, false);
-
-    	function init() {
-    		document.querySelector('#attachment').addEventListener('change', handleFileSelect, false);
-    		selDiv = document.querySelector("#selectedfiles");
-    	}
-
-    	function handleFileSelect(e) {
-    		console.dir(e);
-
-    		if(!e.target.files) return;
-
-    		selDiv.innerHTML = "";
-
-    		var files = e.target.files;
-    		for(var i=0; i<files.length; i++) {
-    			var f = files[i];
-
-    			selDiv.innerHTML += f.name + "<br/>";
-
-    		}
-
-    	}
-    </script>
-
-    </body>
+  </body>
 </html>

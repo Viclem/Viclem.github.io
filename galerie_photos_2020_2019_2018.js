@@ -50,23 +50,79 @@ var images_filters_modals = [
 
 // en images
 var archives_image_agencement = [
+
+  ["/galerie/Athenais_6.jpg", "col-4"],
+  ["/galerie/Lou-Elise_4.jpg", "col-4"],
+  ["/galerie/Athenais_1.jpg", "col-4"],
+
+  ["/galerie/Lou-Elise_5.jpg", "col-3"],
+  ["/galerie/Aureane_4.jpg", "col-3"],
+  ["/galerie/Celia_2.jpg", "col-3"],
+
+  ["/galerie/Margaux_1.jpg", "col-4"],
+  ["/galerie/Morgane_1.jpg", "col-4"],
+  ["/galerie/duobenj_LesLucioles_1.jpg", "col-4"],
+  ["/galerie/Tracy_1.jpg", "col-4"],
+
+  ["/galerie/ensesthetique_1.jpg", "col-3"],
+  ["/galerie/Maily_1.jpg", "col-3"],
+  ["/galerie/ensbenj_LesLucioles_1.jpg", "col-3"],
+
+  ["/galerie/Farah_1.jpg", "col-4"],
+  ["/galerie/Fany_2.jpg", "col-4"],
+  ["/galerie/Anais_1.jpg", "col-4"],
+  ["/galerie/Adeline_1.jpg", "col-4"],
+
+  ["/galerie/Emma_1.jpg", "col-3"],
+  ["/galerie/Zoe_2.jpg", "col-3"],
+  ["/galerie/Aureane_1.jpg", "col-3"],
+
   ["/galerie/Nina_1.jpg", "col-4"],
+  ["/galerie/Tracy_2.jpg", "col-4"],
+  ["/galerie/Fany_1.jpg", "col-4"],
+  ["/galerie/Alison_2.jpg", "col-4"],
+
+  ["/galerie/ens_ClioClub_1.jpg", "col-3"],
+  ["/galerie/Lisa_1.jpg", "col-3"],
+  ["/galerie/Nina_6.jpg", "col-3"],
+
+  ["/galerie/indiv_1.jpg", "col-3"],
+  ["/galerie/ChloeJ_1.jpg", "col-3"],
+  ["/galerie/ens_LesLucioles_2.jpg", "col-3"],
+
+  ["/galerie/Marina_1.jpg", "col-4"],
+  ["/galerie/Lou-Elise_2.jpg", "col-4"],
+  ["/galerie/Elisa_2.jpg", "col-4"],
+  ["/galerie/Emilie_1.jpg", "col-4"],
+
+  ["/galerie/Chanelle_2.jpg", "col-3"],
+  ["/galerie/ens_LesLucioles_1.jpg", "col-3"],
+  ["/galerie/duo_LesLucioles_1.jpg", "col-3"],
+
+  ["/galerie/Zoe_3.jpg", "col-4"],
   ["/galerie/Agathe_1.jpg", "col-4"],
   ["/galerie/Andrea_1.jpg", "col-4"],
-  ["/galerie/Lena_1.jpg", "col-4"],
+  ["/galerie/Angelique_1.jpg", "col-4"],
+
+  ["/galerie/enspoussines_ClioClub_2.jpg", "col-3"],
+  ["/galerie/Emma_2.jpg", "col-3"],
+  ["/galerie/Aureane_2.jpg", "col-3"],
+
+  ["/galerie/EmmaH_1.jpg", "col-3"],
   ["/galerie/Emeline_1.jpg", "col-3"],
-  ["/galerie/Emma_1.jpg", "col-3"],
+  ["/galerie/enscadettes_ClioClub_1.jpg", "col-3"],
+
   ["/galerie/Zoe_1.jpg", "col-3"],
-  ["/galerie/Zoe_2.jpg", "col-3"]
-  // ["/galerie/ensminimes_ClioClub_1.jpg", "photos", "col-4"],
-  // ["/galerie/Lisa_1.jpg", "photos", "col-4"],
-  // ["/galerie/Emma_2.jpg", "photos", "col-4"],
-  // ["/galerie/Auréane_1.jpg", "photos", "col-4"],
-  // ["/galerie/Lou-Elise_1.jpg", "photos", "col-4"],
-  // ["/galerie/Tracy_1.jpg", "photos", "col-4"],
-  // ["/galerie/Angelique_1.jpg", "photos", "col-4"],
-  // ["/galerie/Zoe_3.jpg", "photos", "col-4"],
-  // ["/galerie/ens_ClioClub_1.jpg", "photos", "col-4"],
-  // ["/galerie/Elisa_1.jpg", "photos", "col-4"],
-  // ["/galerie/Lea_1.jpg", "photos", "col-4"],
+  ["/galerie/ensminimes_ClioClub_1.jpg", "col-3"],
+  ["/galerie/Melyne_1.jpg", "col-3"],
+
+  ["/galerie/Emma_3.jpg", "col-4"],
+  ["/galerie/Lena_1.jpg", "col-4"],
+  ["/galerie/Elisa_1.jpg", "col-4"],
+  ["/galerie/Cassandre_1.jpg", "col-4"],
+
+  ["/galerie/enspoussines_ClioClub_1.jpg", "col-3"],
+  ["/galerie/Chanelle_1.jpg", "col-3"],
+  ["/galerie/Lea_1.jpg", "col-3"],
+
 ]

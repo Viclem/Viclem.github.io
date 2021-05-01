@@ -37,11 +37,44 @@ TO DO :
 - [ ] pj : pouvoir en sélectionner de différents dossiers
 - [ ] modals : ajout de videos ?
 - [ ] contact : rs : noms des comptes
-- [ ] ajouter TFX Photos
+- [ ] ajouter TFX Photos + rossignol photographies
 
 
 plus besoin :
 - [ ] (carousel : changer le sens du swipe)
+
+
+GALERIE PHOTOS :
+- Emma (jupette violette 2011) photo photographe ?
+- Loulou (jupette verte et blanche 2012) photo photographe ?
+- Manon Philippe (jupette verte et noire avec boucles roses 2012) à mettre ? (photo moche)
+- jupette violette et rose 2013 (idem jaune Nouchka) : jolie photo ?
+- jupette velours rose et blanche 2013 : jolie photo ?
+- Nouchka (jupette french cancan 2013) vieille photo, une autre ?
+- jupette ens Clio blanche gris rose fleur verte 2013 : jolie photo ?
+- Victoire (jupette blanche fleurs rouges 2014) : jolie photo ?
+- jupette orange froufrou 2014 : jolie photo ?
+- jupette avec gilet noir froufrou rose 2014 : jolie photo ?
+- jupette noeud 2014 : jolie photo ?
+- jupette noire trait or 2014 : jolie photo ?
+- duo Lou Cassandre jupette rouge 2014 : jolie photo ?
+- jupette rouge serpentin or 2014 : jolie photo ?
+- jupette rose et noire Manon Lucioles 2015 : photo ADLB à mettre ?
+- jupette bleue timide 2016 : jolie photo ?
+- jupette blanche motifs rose et noir 2016 : jolie photo ?
+- voltige équestre 2016
+- jupette Juliette Kunda mauve or rose 2016 : jolie photo ?
+- jupette Clara noir motif 2017 : jolie photo ?
+- Margaux jupette orange 2017 : jolie photo ?
+- Elan Gymnique jupette jaune 2017 : jolie photo ?
+- Elan Gymnique jupette jaune peinture 2017 : jolie photo ?
+- Chateaubriant jupette rouge 2017 : jolie photo ?
+- académique violet Les Lucioles 2017 : jolie photo ?
+- duo Les Lucioles noir et violet 2017 : jolie photo ?
+- Elan Gymnique jaune et rose 2018 : jolie photo ?
+- Elan Gymnique noir costume 2018 : jolie photo ?
+
+
 
 
 CODES COULEUR :
