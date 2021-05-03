@@ -143,20 +143,12 @@ GALERIE PHOTOS
         // indiv_louane_1 -> indiv_louane
 
         var finale = nom_fichier.substring(0,recherche_underscore+recherche_nouveau_underscore+1);
-        console.log(finale);
-
 
         document.write("<div class=\"text-center col-lg-3 col-md-4 col-6 filter "+
         images_filters_modals[i][1]+"\"><a href=\"#\" data-bs-toggle=\"modal\" data-bs-target=\"#"+
         images_filters_modals[i][2]+"\"><img src=\"./images"+
         images_filters_modals[i][0]+"\" alt=\" "+
         finale+"\" class=\"img-fluid\"></a></div>");
-
-
-    //test
-
-        // var recherche_underscore = nom_fichier.indexOf("_");
-        // console.log(recherche_underscore);
 
       }
 
@@ -458,69 +450,61 @@ FOOTER
 <!-- Bootstrap JavaScript -->
 <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<!-- Jquery -->
-<script src="./bootstrap/js/jquery.min.js"></script>
+<!-- Jquery (supprime l'effet animation des filtres de la galerie et ?)-->
+<!-- <script src="./bootstrap/js/jquery.min.js"></script> -->
 
-<!-- CODE TO CLOSE THE TOGGLE ON CLIC -->
-    <!-- <script>
-        $('.navbar-collapse a').click(function(){
-        $(".navbar-collapse").collapse('hide');
-        });
-    </script> -->
 
-<!-- CLOSE THE TOGGLE BY CLICKING ANYWHERE ON THE SCREEN -->
-    <script>
-        $(document).click(function(){
-        $(".navbar-collapse").collapse('hide');
-        });
-    </script>
+<script>
 
-<!-- ACTIVE LINK -->
-    <script>
-    	/* Code for changing activelink on clicking */
-    	var btns =$("#navbarMenu .navbar-nav .nav-link");
-    	for (var i = 0; i < btns.length; i++) {
-    		btns[i].addEventListener("click",function () {
-    			var current = document.getElementsByClassName("active");
-    			current[0].className = current[0].className.replace(" active", "");
-    			this.className += " active";
-    		});
-    	}
-    	/* Code for changing activelink on Scrolling */
-    	$(window).scroll(function () {
-    		var distance = $(window).scrollTop();
-    		$('.link-active-scroll').each(function (i) {
-    			if ($(this).position().top<= distance + 180) {
-    				$('.navbar-nav a.active').removeClass('active');
-    				$('.navbar-nav a').eq(i).addClass('active');
-    			}
-    		});
-    	}
-    	).scroll();
-    </script>
+// CLOSE THE TOGGLE BY CLICKING ANYWHERE ON THE SCREEN
+$(document).click(function(){
+  $(".navbar-collapse").collapse('hide');
+});
 
-<!-- GALLERY FILTER -->
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $('.list').click(function(){
-          const value = $(this).attr('data-filter');
-          if (value == '2020'){
-            $('.filter').show('1000');
-          }
-          else{
-            $('.filter').not('.'+value).hide('1000');
-            $('.filter').filter('.'+value).show('1000');
-          }
-        })
-        // add active class on selected item
-        $('.list').click(function(){
-          $(this).addClass('active').siblings().removeClass('active');
-        })
-      })
-    </script>
+// ACTIVE LINK
+	/* Code for changing activelink on clicking */
+	var btns =$("#navbarMenu .navbar-nav .nav-link");
+	for (var i = 0; i < btns.length; i++) {
+		btns[i].addEventListener("click",function () {
+			var current = document.getElementsByClassName("active");
+			current[0].className = current[0].className.replace(" active", "");
+			this.className += " active";
+		});
+	}
+	/* Code for changing activelink on Scrolling */
+	$(window).scroll(function () {
+		var distance = $(window).scrollTop();
+		$('.link-active-scroll').each(function (i) {
+			if ($(this).position().top<= distance + 180) {
+				$('.navbar-nav a.active').removeClass('active');
+				$('.navbar-nav a').eq(i).addClass('active');
+			}
+		});
+	}
+	).scroll();
 
-<!-- FORM FILES INPUT : pour afficher les noms des fichiers ajoutés par l'utilisateur -->
-    <script type="text/javascript">
+// GALLERY FILTER
+
+// au chargement de la page : affichage de 2020 uniquement
+value = "2020";
+$('.filter').not('.'+value).hide('1000');
+$('.filter').filter('.'+value).show('1000');
+
+// au clic : affichage des photos du filter correspondant
+$(document).ready(function(){
+  $('.list').click(function(){
+    const value = $(this).attr('data-filter');
+    $('.filter').not('.'+value).hide('1000');
+    $('.filter').filter('.'+value).show('1000');
+  })
+
+  // add active class on selected item
+  $('.list').click(function(){
+    $(this).addClass('active').siblings().removeClass('active');
+  })
+})
+
+// FORM FILES INPUT : pour afficher les noms des fichiers ajoutés par l'utilisateur
     	var selDiv = "";
 
     	document.addEventListener("DOMContentLoaded", init, false);
