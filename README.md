@@ -33,6 +33,8 @@ TO DO :
 - [ ] trouver des icons (couture, aiguille...)
 - [ ] vérifier les liens des photographes
 - [ ] ajouter TFX Photos + rossignol photographies
+- [ ] galerie archives : ajouter une visualisation des photos ?
+- [ ] infos à ajouter au footer ?? (SIRET n° 753 214 154 00019 | APE 1419Z | R.M. 753 214 154 RM 28)
 
 A PENSER :
 - [ ] mail = nalouette ou nalouette28 ??
@@ -62,6 +64,8 @@ GALERIE PHOTOS :
 - jupette blanche motifs rose et noir 2016 : jolie photo ?
 - voltige équestre 2016
 - jupette Juliette Kunda mauve or rose 2016 : jolie photo ?
+
+pas à mettre dans le book :
 - jupette Clara noir motif 2017 : jolie photo ?
 - Margaux jupette orange 2017 : jolie photo ?
 - Elan Gymnique jupette jaune 2017 : jolie photo ?

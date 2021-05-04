@@ -17,13 +17,13 @@ var images_filters_modals = [
   ["/2020/indiv_Adeline/indiv_adeline_3.jpg", "2020", "indiv_Adeline_20"],
 
 // Saison 2019
-  ["/2019/indiv_Maily/indiv_maily_1.jpg", "2019", "indiv_Maily_19"],
   ["/2019/indiv_Lou-Elise/indiv_louelise_1.jpg", "2019", "indiv_Lou-Elise_19"],
   ["/2019/indiv_Athenais/indiv_athenais_1.jpg", "2019", "indiv_Athenais_19"],
   ["/2019/indiv_Morgane/indiv_morgane_4.jpg", "2019", "indiv_Morgane_19"],
 
+  ["/2019/indiv_Maily/indiv_maily_1.jpg", "2019", "indiv_Maily_19"],
   ["/2019/indiv_Anais/indiv_anais_1.jpg", "2019", "indiv_Anais_19"],
-  ["/2019/indiv_Farah/indiv_farah_1.jpg", "2019", "indiv_Farah_19"],
+  ["/2019/indiv_Farah/Farah_2.jpg", "2019", "indiv_Farah_19"],
   ["/2019/ensbenj_LesLucioles/ensbenj_leslucioles_1.jpg", "2019", "ensbenj_LesLucioles_19"],
   ["/2019/duobenj_LesLucioles/duobenj_leslucioles_1.jpg", "2019", "duobenj_LesLucioles_19"],
 
@@ -51,44 +51,22 @@ var images_filters_modals = [
 // en images
 var archives_image_agencement = [
 
-  ["/galerie/Athenais_6.jpg", "col-4"],
-  ["/galerie/Lou-Elise_4.jpg", "col-4"],
-  ["/galerie/Athenais_1.jpg", "col-4"],
-
-  ["/galerie/Lou-Elise_5.jpg", "col-3"],
-  ["/galerie/Aureane_4.jpg", "col-3"],
-  ["/galerie/Celia_2.jpg", "col-3"],
-
-  ["/galerie/Margaux_1.jpg", "col-4"],
-  ["/galerie/Morgane_1.jpg", "col-4"],
-  ["/galerie/duobenj_LesLucioles_1.jpg", "col-4"],
-  ["/galerie/Tracy_1.jpg", "col-4"],
-
-  ["/galerie/ensesthetique_1.jpg", "col-3"],
-  ["/galerie/Maily_1.jpg", "col-3"],
-  ["/galerie/ensbenj_LesLucioles_1.jpg", "col-3"],
-
-  ["/galerie/Farah_1.jpg", "col-4"],
-  ["/galerie/Fany_2.jpg", "col-4"],
-  ["/galerie/Anais_1.jpg", "col-4"],
-  ["/galerie/Adeline_1.jpg", "col-4"],
-
   ["/galerie/Emma_1.jpg", "col-3"],
   ["/galerie/Zoe_2.jpg", "col-3"],
-  ["/galerie/Aureane_1.jpg", "col-3"],
+  ["/galerie/ens_ClioClub_1.jpg", "col-3"],
 
   ["/galerie/Nina_1.jpg", "col-4"],
   ["/galerie/Tracy_2.jpg", "col-4"],
-  ["/galerie/Fany_1.jpg", "col-4"],
   ["/galerie/Alison_2.jpg", "col-4"],
+  ["/galerie/Nina_1.jpg", "col-4"], // doublon : à modifier
 
-  ["/galerie/ens_ClioClub_1.jpg", "col-3"],
   ["/galerie/Lisa_1.jpg", "col-3"],
   ["/galerie/Nina_6.jpg", "col-3"],
+  ["/galerie/Lisa_1.jpg", "col-3"], // doublon : à modifier
 
   ["/galerie/indiv_1.jpg", "col-3"],
-  ["/galerie/ChloeJ_1.jpg", "col-3"],
   ["/galerie/ens_LesLucioles_2.jpg", "col-3"],
+  ["/galerie/duoTC_ClioClub_1.jpg", "col-3"],
 
   ["/galerie/Marina_1.jpg", "col-4"],
   ["/galerie/Lou-Elise_2.jpg", "col-4"],

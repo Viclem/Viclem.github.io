@@ -87,20 +87,18 @@ GALERIE PHOTOS
   <div class="row">
     <div class="col-lg-12 d-flex justify-content-center">
       <ul>
-        <li class="list active" data-filter="2020">2020</li>
+        <li class="list active" data-filter="recent" style="font-size: 15px">♥</li>
+        <li class="list" data-filter="2020">2020</li>
         <li class="list" data-filter="2019">2019</li>
         <li class="list" data-filter="2018">2018</li>
-        <li class="list" data-filter="archives">archives</li>
+        <li class="list" data-filter="archives">Book</li>
       </ul>
     </div>
   </div>
   <div class="row g-3">
-
     <script type="text/javascript" src="./galerie_photos_2020_2019_2018.js"></script>
-
     <script>
     //GALERIE
-
       for (var i=0; i<images_filters_modals.length; i=i+1) {
 
         // /2020/indiv_Louane/indiv_louane_1.jpg
@@ -126,8 +124,6 @@ GALERIE PHOTOS
 //
 //         //indiv_louane_1 -> indiv_louane
 //         var finale = nom_fichier.substring(0,longueur_nom_fichier-2);
-
-
 
 
 
@@ -170,12 +166,7 @@ GALERIE PHOTOS
       agencement_colonne+" filter archives\"><img src=\"./images"+
       archives_image_agencement[i][0]+"\" alt=\"\" class=\"img-fluid\"></div>");
     }
-
-
-
     </script>
-
-
 </section>
 
 
@@ -224,19 +215,15 @@ MODALS PHOTOS
   else if (agencement == "modal_2_1_1_2_"){
     modal_2_1_1_2_(images);
   }
-
   else if (agencement == "modal_2_1_2_"){
     modal_2_1_2_(images);
   }
-
   else if (agencement == "modal_3_"){
     modal_3_(images);
   }
-
   else if (agencement == "modal_3_1_2_"){
     modal_3_1_2_(images);
   }
-
   else{
     console.log("Modal : ce type d'agencement n'est pas vérifié dans 'if (agencement) etc'")
   }
