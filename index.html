@@ -328,53 +328,65 @@ QUI SUIS-JE ?
           </div>
         </div>
       </div>
-  	<!-- FORM -->
-    <form action="send_form.php" method="post" enctype="multipart/form-data">
-    	<div class="row justify-content-center">   <!-- = centré -->
-    		<!-- 1ERE COLONNE "INFOS" -->
-    		<div class="col-lg-4 col-12">   <!-- gx-5 = espacement de la bordure -->
-    			<div class="form-floating mb-2">   <!-- form-floating = dans la case -->
-    				<input type="text" name="name" class="form-control form-control-sm" id="name">   <!-- form-control = mise en forme générale de la zone (dans un cadre etc) / form-control-sm = smaller font-size on sm -->
-    				<label for="name">Nom</label>   <!-- = nom de la zone -->
-    			</div>
-    			<div class="form-floating mb-2">
-    				<input type="email" name="email" class="form-control form-control-sm" id="email">
-    				<label for="email">Email</label>
-    			</div>
-    			<div class="form-floating mb-2">
-    				<input type="tel" name="phone" class="form-control form-control-sm" id="phone">
-    				<label for="phone">Téléphone</label>
-    			</div>
-    		</div>
-    		<!-- 2EME COLONNE "MESSAGE + PJ + ENVOYER" -->
-    		<div class="col-lg-6 col-12">
-    			<div class="form-floating">
-    				<textarea name="message" class="form-control form-control-sm" id="message" style="height: 150px"></textarea>   <!-- style height = hauteur de la text-area -->
-    				<label for="message">Message</label>
-    			</div>
-    			<div class="col-12 mt-3">
-    				<label for="pj" class="form-label form-control-sm">   <!-- form-label = texte inclu dans le form -->
-    					Ajouter une pièce jointe :
-    					<br />
-    					<p class="fst-italic" style="font-size: 12px">
-    						Vous pouvez sélectionner plusieurs fichiers.
-    						<br />
-    						Les fichiers sélectionnés doivent se situer dans un même dossier.
-    					</p>
-    				</label>
-    			</div>
-    			<div class="col-md-8 col-12">
-    				<input class="form-control form-control-sm" type="file" name="attachment[]" id="attachment" multiple>
-    				<div class="mt-1" style="font-size: 12px" id="selectedfiles"></div>   <!-- font-size = taille d'affichage des noms des PJ -->
-          </div>
-          <div class="text-lg-start text-center my-4">   <!-- = bouton aligné à gauche jusqu'à lg puis centré -->
-    				<button type="submit" class="btn text-white text-uppercase px-3" style="background-color: #4c6c8c">Envoyer</button>   <!-- px-3 = ~largeur du bouton -->
-    			</div>
-    		</div>
-    	</div>
-    </form>
-  </div>
-</section>
+      <!-- FORM -->
+      <form class="needs-validation" action="send_form.php" method="post" enctype="multipart/form-data" novalidate>   <!-- class"needs-validation" + novalidate = allow to submit or not : red or green indications -->
+      	<div class="row justify-content-center">   <!-- = centré -->
+      		<!-- 1ERE COLONNE "INFOS" -->
+      		<div class="col-lg-4 col-12">   <!-- gx-5 = espacement de la bordure -->
+      			<div class="form-floating mb-2">   <!-- form-floating = dans la case -->
+      				<input type="text" name="name" class="form-control form-control-sm" id="name" required>   <!-- form-control = mise en forme générale de la zone (dans un cadre etc) / form-control-sm = smaller font-size on sm -->   <!-- required = champ obligatoire (si non rempli : envoi du formulaire impossible (red indication) -->
+      				<label for="name">Nom</label>   <!-- = nom de la zone -->
+              <div class="invalid-feedback mb-3">   <!-- = texte à indiquer si champs non rempli -->
+                Merci de renseigner ce champ.
+              </div>
+      			</div>
+      			<div class="form-floating mb-2">
+      				<input type="email" name="email" class="form-control form-control-sm" id="email" required>
+      				<label for="email">Email</label>
+              <div class="invalid-feedback mb-3">
+                Merci de renseigner une adresse email valide.
+              </div>
+      			</div>
+      			<div class="form-floating mb-2">
+      				<input type="tel" name="phone" class="form-control form-control-sm" id="phone" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" required>   <!-- type"tel" = clavier numérique automatiquement proposé sur certains navigateurs  -->   <!-- ce pattern = accepte toutes les façons d'écrire un french phone number  -->
+      				<label for="phone">Téléphone</label>
+              <div class="invalid-feedback mb-3">
+                Merci de renseigner un numéro de téléphone valide.
+              </div>
+      			</div>
+      		</div>
+      		<!-- 2EME COLONNE "MESSAGE + PJ + ENVOYER" -->
+      		<div class="col-lg-6 col-12">
+      			<div class="form-floating">
+      				<textarea name="message" class="form-control form-control-sm" id="message" style="height: 150px" required></textarea>   <!-- style height = hauteur de la text-area -->
+      				<label for="message">Message</label>
+              <div class="invalid-feedback mb-3">
+                Merci de me préciser votre demande.
+              </div>
+      			</div>
+      			<div class="col-12 mt-3">
+      				<label for="pj" class="form-label form-control-sm">   <!-- form-label = texte inclu dans le form -->
+      					Ajouter une pièce jointe :
+      					<br />
+      					<p class="fst-italic" style="font-size: 12px">
+      						Vous pouvez sélectionner plusieurs fichiers.
+      						<br />
+      						Les fichiers sélectionnés doivent se situer dans un même dossier.
+      					</p>
+      				</label>
+      			</div>
+      			<div class="col-md-8 col-12">
+      				<input class="form-control form-control-sm" type="file" name="attachment[]" id="attachment" multiple>
+      				<div class="mt-1" style="font-size: 12px" id="selectedfiles"></div>   <!-- font-size = taille d'affichage des noms des PJ -->
+            </div>
+            <div class="text-lg-start text-center my-4">   <!-- = bouton aligné à gauche jusqu'à lg puis centré -->
+      				<button class="btn text-white text-uppercase px-3" type="submit" style="background-color: #4c6c8c">Envoyer</button>   <!-- px-3 = ~largeur du bouton -->
+      			</div>
+      		</div>
+      	</div>
+      </form>
+    </div>
+  </section>
 
 <!-- ========================================================
 MERCI LES PHOTOGRAPHES
@@ -492,31 +504,53 @@ $(document).ready(function(){
 })
 
 // FORM FILES INPUT : pour afficher les noms des fichiers ajoutés par l'utilisateur
-    	var selDiv = "";
+	var selDiv = "";
 
-    	document.addEventListener("DOMContentLoaded", init, false);
+	document.addEventListener("DOMContentLoaded", init, false);
 
-    	function init() {
-    		document.querySelector('#attachment').addEventListener('change', handleFileSelect, false);
-    		selDiv = document.querySelector("#selectedfiles");
-    	}
+	function init() {
+		document.querySelector('#attachment').addEventListener('change', handleFileSelect, false);
+		selDiv = document.querySelector("#selectedfiles");
+	}
 
-    	function handleFileSelect(e) {
-    		console.dir(e);
+	function handleFileSelect(e) {
+		console.dir(e);
 
-    		if(!e.target.files) return;
+		if(!e.target.files) return;
 
-    		selDiv.innerHTML = "";
+		selDiv.innerHTML = "";
 
-    		var files = e.target.files;
-    		for(var i=0; i<files.length; i++) {
-    			var f = files[i];
+		var files = e.target.files;
+		for(var i=0; i<files.length; i++) {
+			var f = files[i];
 
-    			selDiv.innerHTML += f.name + "<br/>";
+			selDiv.innerHTML += f.name + "<br/>";
 
-    		}
+		}
 
-    	}
+	}
+
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+
     </script>
 
     </body>

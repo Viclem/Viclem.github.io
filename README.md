@@ -28,7 +28,7 @@ TO DO :
 - [ ] confirm_message : réussir à centrer verticalement automatiquement
 - [ ] modals : ajout de videos ?
 - [ ] crop image Lou-Elise
-- [ ] formulaire de contact : paramétrer lors de l'envoi "merci de remplir cette case" + téléphone : voir si possible de limiter à 10 chiffres ?
+- [x] formulaire de contact : paramétrer lors de l'envoi "merci de remplir cette case" + téléphone : voir si possible de limiter à 10 chiffres ?
 - [ ] contact : rs : noms des comptes
 - [ ] trouver des icons (couture, aiguille...)
 - [ ] vérifier les liens des photographes
