@@ -1,5 +1,11 @@
 var images_filters_modals = [
 
+// ♥
+  ["/2020/indiv_Louane/indiv_louane_1.jpg", "coeur", "indiv_Louane_20"],
+  ["/2020/duonatTC_ClioClub/duonat_clioclub_1.jpg", "coeur", "duonatTC_ClioClub_20"],
+  ["/2019/indiv_Lou-Elise/indiv_louelise_1.jpg", "coeur", "indiv_Lou-Elise_19"],
+  ["/2019/duonatTC_ClioClub/duonat_clioclub_3.jpg", "coeur", "duonatTC_ClioClub_19"],
+
 // Saison 2020
   ["/2020/indiv_Louane/indiv_louane_1.jpg", "2020", "indiv_Louane_20"],
   ["/2020/duonatTC_ClioClub/duonat_clioclub_1.jpg", "2020", "duonatTC_ClioClub_20"],
@@ -68,7 +74,7 @@ var archives_image_agencement = [
   ["/galerie/ens_LesLucioles_2.jpg", "col-3"],
   ["/galerie/duoTC_ClioClub_1.jpg", "col-3"],
 
-  ["/galerie/Marina_1.jpg", "col-4"],
+  ["/galerie/Marina_2.jpg", "col-4"],
   ["/galerie/Lou-Elise_2.jpg", "col-4"],
   ["/galerie/Elisa_2.jpg", "col-4"],
   ["/galerie/Emilie_1.jpg", "col-4"],

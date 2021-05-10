@@ -32,7 +32,7 @@ TO DO :
 - [ ] contact : rs : noms des comptes
 - [ ] trouver des icons (couture, aiguille...)
 - [ ] vérifier les liens des photographes
-- [ ] ajouter TFX Photos + rossignol photographies
+- [ ] ajouter TFX Photos + rossignol photographies + MB Photographe
 - [ ] galerie archives : ajouter une visualisation des photos ?
 - [ ] infos à ajouter au footer ?? (SIRET n° 753 214 154 00019 | APE 1419Z | R.M. 753 214 154 RM 28)
 
